@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **expired** | **bool** |  | [optional] 
 **expires_at** | **str** |  | [optional] 
 **source_pdfs** | **list[object]** |  | [optional] 
+**pdf_hash** | **str** |  | [optional] 
 **download_url** | **str** |  | [optional] 
 **submission_ids** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 

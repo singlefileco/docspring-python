@@ -36,6 +36,7 @@ class SubmissionData(object):
         'html': 'str',
         'css': 'str',
         'metadata': 'object',
+        'field_overrides': 'object',
         'data_requests': 'list[CreateSubmissionDataRequestData]'
     }
 
@@ -45,10 +46,11 @@ class SubmissionData(object):
         'html': 'html',
         'css': 'css',
         'metadata': 'metadata',
+        'field_overrides': 'field_overrides',
         'data_requests': 'data_requests'
     }
 
-    def __init__(self, test=None, data=None, html=None, css=None, metadata=None, data_requests=None):  # noqa: E501
+    def __init__(self, test=None, data=None, html=None, css=None, metadata=None, field_overrides=None, data_requests=None):  # noqa: E501
         """SubmissionData - a model defined in OpenAPI"""  # noqa: E501
 
         self._test = None
@@ -56,6 +58,7 @@ class SubmissionData(object):
         self._html = None
         self._css = None
         self._metadata = None
+        self._field_overrides = None
         self._data_requests = None
         self.discriminator = None
 
@@ -68,6 +71,8 @@ class SubmissionData(object):
             self.css = css
         if metadata is not None:
             self.metadata = metadata
+        if field_overrides is not None:
+            self.field_overrides = field_overrides
         if data_requests is not None:
             self.data_requests = data_requests
 
@@ -177,6 +182,27 @@ class SubmissionData(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def field_overrides(self):
+        """Gets the field_overrides of this SubmissionData.  # noqa: E501
+
+
+        :return: The field_overrides of this SubmissionData.  # noqa: E501
+        :rtype: object
+        """
+        return self._field_overrides
+
+    @field_overrides.setter
+    def field_overrides(self, field_overrides):
+        """Sets the field_overrides of this SubmissionData.
+
+
+        :param field_overrides: The field_overrides of this SubmissionData.  # noqa: E501
+        :type: object
+        """
+
+        self._field_overrides = field_overrides
 
     @property
     def data_requests(self):

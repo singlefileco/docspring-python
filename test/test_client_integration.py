@@ -52,6 +52,11 @@ class TestClient(unittest.TestCase):
                   'data': {
                       'title': 'Test PDF',
                       'description': 'This PDF is great!'
+                  },
+                  'field_overrides': {
+                    'title': {
+                      'required': False
+                    }
                   }
               })
           wait_patched.assert_called()

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import docspring
-from docspring.models.templatesv2_template_document_metadata import Templatesv2TemplateDocumentMetadata  # noqa: E501
+from docspring.models.templatestemplate_id_template import TemplatestemplateIdTemplate  # noqa: E501
 from docspring.rest import ApiException
 
 
-class TestTemplatesv2TemplateDocumentMetadata(unittest.TestCase):
-    """Templatesv2TemplateDocumentMetadata unit test stubs"""
+class TestTemplatestemplateIdTemplate(unittest.TestCase):
+    """TemplatestemplateIdTemplate unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestTemplatesv2TemplateDocumentMetadata(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testTemplatesv2TemplateDocumentMetadata(self):
-        """Test Templatesv2TemplateDocumentMetadata"""
+    def testTemplatestemplateIdTemplate(self):
+        """Test TemplatestemplateIdTemplate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = docspring.models.templatesv2_template_document_metadata.Templatesv2TemplateDocumentMetadata()  # noqa: E501
+        # model = docspring.models.templatestemplate_id_template.TemplatestemplateIdTemplate()  # noqa: E501
         pass
 
 

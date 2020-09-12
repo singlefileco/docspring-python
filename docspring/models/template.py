@@ -36,6 +36,7 @@ class Template(object):
         'parent_folder_id': 'str',
         'expire_after': 'float',
         'allow_additional_properties': 'bool',
+        'description': 'str',
         'public_submissions': 'bool',
         'slack_webhook_url': 'str',
         'path': 'str',
@@ -57,6 +58,7 @@ class Template(object):
         'parent_folder_id': 'parent_folder_id',
         'expire_after': 'expire_after',
         'allow_additional_properties': 'allow_additional_properties',
+        'description': 'description',
         'public_submissions': 'public_submissions',
         'slack_webhook_url': 'slack_webhook_url',
         'path': 'path',
@@ -72,7 +74,7 @@ class Template(object):
         'document_url': 'document_url'
     }
 
-    def __init__(self, expiration_interval=None, webhook_url=None, parent_folder_id=None, expire_after=None, allow_additional_properties=None, public_submissions=None, slack_webhook_url=None, path=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, permanent_document_url=None, template_type=None, id=None, page_dimensions=None, redirect_url=None, document_url=None):  # noqa: E501
+    def __init__(self, expiration_interval=None, webhook_url=None, parent_folder_id=None, expire_after=None, allow_additional_properties=None, description=None, public_submissions=None, slack_webhook_url=None, path=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, permanent_document_url=None, template_type=None, id=None, page_dimensions=None, redirect_url=None, document_url=None):  # noqa: E501
         """Template - a model defined in OpenAPI"""  # noqa: E501
 
         self._expiration_interval = None
@@ -80,6 +82,7 @@ class Template(object):
         self._parent_folder_id = None
         self._expire_after = None
         self._allow_additional_properties = None
+        self._description = None
         self._public_submissions = None
         self._slack_webhook_url = None
         self._path = None
@@ -105,6 +108,8 @@ class Template(object):
             self.expire_after = expire_after
         if allow_additional_properties is not None:
             self.allow_additional_properties = allow_additional_properties
+        if description is not None:
+            self.description = description
         if public_submissions is not None:
             self.public_submissions = public_submissions
         if slack_webhook_url is not None:
@@ -242,6 +247,27 @@ class Template(object):
         """
 
         self._allow_additional_properties = allow_additional_properties
+
+    @property
+    def description(self):
+        """Gets the description of this Template.  # noqa: E501
+
+
+        :return: The description of this Template.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Template.
+
+
+        :param description: The description of this Template.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def public_submissions(self):

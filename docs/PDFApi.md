@@ -11,8 +11,9 @@ Method | HTTP request | Description
 [**create_custom_file_from_upload**](PDFApi.md#create_custom_file_from_upload) | **POST** /custom_files | Create a new custom file from a cached presign upload
 [**create_data_request_token**](PDFApi.md#create_data_request_token) | **POST** /data_requests/{data_request_id}/tokens | Creates a new data request token for form authentication
 [**create_folder**](PDFApi.md#create_folder) | **POST** /folders/ | Create a folder
-[**create_template**](PDFApi.md#create_template) | **POST** /templates | Upload a new PDF template with a file upload
-[**create_template_from_upload**](PDFApi.md#create_template_from_upload) | **POST** /templates?v&#x3D;2 | Create a new PDF template from a cached presign upload
+[**create_html_template**](PDFApi.md#create_html_template) | **POST** /templates?desc&#x3D;html | Create a new HTML template
+[**create_pdf_template**](PDFApi.md#create_pdf_template) | **POST** /templates | Create a new PDF template with a form POST file upload
+[**create_pdf_template_from_upload**](PDFApi.md#create_pdf_template_from_upload) | **POST** /templates?desc&#x3D;cached_upload | Create a new PDF template from a cached presign upload
 [**delete_folder**](PDFApi.md#delete_folder) | **DELETE** /folders/{folder_id} | Delete a folder
 [**expire_combined_submission**](PDFApi.md#expire_combined_submission) | **DELETE** /combined_submissions/{combined_submission_id} | Expire a combined submission
 [**expire_submission**](PDFApi.md#expire_submission) | **DELETE** /submissions/{submission_id} | Expire a PDF submission
@@ -31,6 +32,7 @@ Method | HTTP request | Description
 [**rename_folder**](PDFApi.md#rename_folder) | **POST** /folders/{folder_id}/rename | Rename a folder
 [**test_authentication**](PDFApi.md#test_authentication) | **GET** /authentication | Test Authentication
 [**update_data_request**](PDFApi.md#update_data_request) | **PUT** /data_requests/{data_request_id} | Update a submission data request
+[**update_template**](PDFApi.md#update_template) | **PUT** /templates/{template_id} | Update a Template
 
 
 # **batch_generate_pdf_v1**
@@ -406,10 +408,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_template**
-> PendingTemplate create_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
+# **create_html_template**
+> PendingTemplate create_html_template(create_template_data1)
 
-Upload a new PDF template with a file upload
+Create a new HTML template
+
+### Example
+
+* Basic Authentication (api_token_basic): 
+```python
+from __future__ import print_function
+import time
+import docspring
+from docspring.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: api_token_basic
+configuration = docspring.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = docspring.PDFApi(docspring.ApiClient(configuration))
+create_template_data1 = docspring.CreateTemplateData1() # CreateTemplateData1 | 
+
+try:
+    # Create a new HTML template
+    api_response = api_instance.create_html_template(create_template_data1)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PDFApi->create_html_template: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_template_data1** | [**CreateTemplateData1**](CreateTemplateData1.md)|  | 
+
+### Return type
+
+[**PendingTemplate**](PendingTemplate.md)
+
+### Authorization
+
+[api_token_basic](../README.md#api_token_basic)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_pdf_template**
+> PendingTemplate create_pdf_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
+
+Create a new PDF template with a form POST file upload
 
 ### Example
 
@@ -433,11 +488,11 @@ template_name = 'template_name_example' # str |
 template_parent_folder_id = 'template_parent_folder_id_example' # str |  (optional)
 
 try:
-    # Upload a new PDF template with a file upload
-    api_response = api_instance.create_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
+    # Create a new PDF template with a form POST file upload
+    api_response = api_instance.create_pdf_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PDFApi->create_template: %s\n" % e)
+    print("Exception when calling PDFApi->create_pdf_template: %s\n" % e)
 ```
 
 ### Parameters
@@ -463,8 +518,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_template_from_upload**
-> PendingTemplate create_template_from_upload(create_template_data)
+# **create_pdf_template_from_upload**
+> PendingTemplate create_pdf_template_from_upload(create_template_data)
 
 Create a new PDF template from a cached presign upload
 
@@ -489,10 +544,10 @@ create_template_data = docspring.CreateTemplateData() # CreateTemplateData |
 
 try:
     # Create a new PDF template from a cached presign upload
-    api_response = api_instance.create_template_from_upload(create_template_data)
+    api_response = api_instance.create_pdf_template_from_upload(create_template_data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PDFApi->create_template_from_upload: %s\n" % e)
+    print("Exception when calling PDFApi->create_pdf_template_from_upload: %s\n" % e)
 ```
 
 ### Parameters
@@ -1469,6 +1524,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UpdateDataRequestResponse**](UpdateDataRequestResponse.md)
+
+### Authorization
+
+[api_token_basic](../README.md#api_token_basic)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_template**
+> UpdateTemplateResponse update_template(template_id, update_template_data)
+
+Update a Template
+
+### Example
+
+* Basic Authentication (api_token_basic): 
+```python
+from __future__ import print_function
+import time
+import docspring
+from docspring.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: api_token_basic
+configuration = docspring.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = docspring.PDFApi(docspring.ApiClient(configuration))
+template_id = 'tpl_000000000000000003' # str | 
+update_template_data = docspring.UpdateTemplateData() # UpdateTemplateData | 
+
+try:
+    # Update a Template
+    api_response = api_instance.update_template(template_id, update_template_data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PDFApi->update_template: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **template_id** | **str**|  | 
+ **update_template_data** | [**UpdateTemplateData**](UpdateTemplateData.md)|  | 
+
+### Return type
+
+[**UpdateTemplateResponse**](UpdateTemplateResponse.md)
 
 ### Authorization
 

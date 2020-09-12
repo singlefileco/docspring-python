@@ -35,6 +35,7 @@ class CombinedSubmission(object):
         'expired': 'bool',
         'expires_at': 'str',
         'source_pdfs': 'list[object]',
+        'pdf_hash': 'str',
         'download_url': 'str',
         'submission_ids': 'list[str]',
         'id': 'str',
@@ -47,6 +48,7 @@ class CombinedSubmission(object):
         'expired': 'expired',
         'expires_at': 'expires_at',
         'source_pdfs': 'source_pdfs',
+        'pdf_hash': 'pdf_hash',
         'download_url': 'download_url',
         'submission_ids': 'submission_ids',
         'id': 'id',
@@ -54,13 +56,14 @@ class CombinedSubmission(object):
         'actions': 'actions'
     }
 
-    def __init__(self, metadata=None, expired=None, expires_at=None, source_pdfs=None, download_url=None, submission_ids=None, id=None, state=None, actions=None):  # noqa: E501
+    def __init__(self, metadata=None, expired=None, expires_at=None, source_pdfs=None, pdf_hash=None, download_url=None, submission_ids=None, id=None, state=None, actions=None):  # noqa: E501
         """CombinedSubmission - a model defined in OpenAPI"""  # noqa: E501
 
         self._metadata = None
         self._expired = None
         self._expires_at = None
         self._source_pdfs = None
+        self._pdf_hash = None
         self._download_url = None
         self._submission_ids = None
         self._id = None
@@ -76,6 +79,8 @@ class CombinedSubmission(object):
             self.expires_at = expires_at
         if source_pdfs is not None:
             self.source_pdfs = source_pdfs
+        if pdf_hash is not None:
+            self.pdf_hash = pdf_hash
         if download_url is not None:
             self.download_url = download_url
         if submission_ids is not None:
@@ -170,6 +175,27 @@ class CombinedSubmission(object):
         """
 
         self._source_pdfs = source_pdfs
+
+    @property
+    def pdf_hash(self):
+        """Gets the pdf_hash of this CombinedSubmission.  # noqa: E501
+
+
+        :return: The pdf_hash of this CombinedSubmission.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_hash
+
+    @pdf_hash.setter
+    def pdf_hash(self, pdf_hash):
+        """Sets the pdf_hash of this CombinedSubmission.
+
+
+        :param pdf_hash: The pdf_hash of this CombinedSubmission.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_hash = pdf_hash
 
     @property
     def download_url(self):

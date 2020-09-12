@@ -47,7 +47,9 @@ class SubmissionDataRequest(object):
         'auth_session_id_hash': 'str',
         'auth_user_id_hash': 'str',
         'auth_username_hash': 'str',
-        'auth_phone_number_hash': 'str'
+        'auth_phone_number_hash': 'str',
+        'ip_address': 'str',
+        'user_agent': 'str'
     }
 
     attribute_map = {
@@ -67,10 +69,12 @@ class SubmissionDataRequest(object):
         'auth_session_id_hash': 'auth_session_id_hash',
         'auth_user_id_hash': 'auth_user_id_hash',
         'auth_username_hash': 'auth_username_hash',
-        'auth_phone_number_hash': 'auth_phone_number_hash'
+        'auth_phone_number_hash': 'auth_phone_number_hash',
+        'ip_address': 'ip_address',
+        'user_agent': 'user_agent'
     }
 
-    def __init__(self, id=None, name=None, email=None, order=None, fields=None, metadata=None, state=None, viewed_at=None, completed_at=None, auth_type=None, auth_second_factor_type=None, auth_provider=None, auth_session_started_at=None, auth_session_id_hash=None, auth_user_id_hash=None, auth_username_hash=None, auth_phone_number_hash=None):  # noqa: E501
+    def __init__(self, id=None, name=None, email=None, order=None, fields=None, metadata=None, state=None, viewed_at=None, completed_at=None, auth_type=None, auth_second_factor_type=None, auth_provider=None, auth_session_started_at=None, auth_session_id_hash=None, auth_user_id_hash=None, auth_username_hash=None, auth_phone_number_hash=None, ip_address=None, user_agent=None):  # noqa: E501
         """SubmissionDataRequest - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -90,6 +94,8 @@ class SubmissionDataRequest(object):
         self._auth_user_id_hash = None
         self._auth_username_hash = None
         self._auth_phone_number_hash = None
+        self._ip_address = None
+        self._user_agent = None
         self.discriminator = None
 
         self.id = id
@@ -119,6 +125,10 @@ class SubmissionDataRequest(object):
             self.auth_username_hash = auth_username_hash
         if auth_phone_number_hash is not None:
             self.auth_phone_number_hash = auth_phone_number_hash
+        if ip_address is not None:
+            self.ip_address = ip_address
+        if user_agent is not None:
+            self.user_agent = user_agent
 
     @property
     def id(self):
@@ -508,6 +518,48 @@ class SubmissionDataRequest(object):
         """
 
         self._auth_phone_number_hash = auth_phone_number_hash
+
+    @property
+    def ip_address(self):
+        """Gets the ip_address of this SubmissionDataRequest.  # noqa: E501
+
+
+        :return: The ip_address of this SubmissionDataRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip_address
+
+    @ip_address.setter
+    def ip_address(self, ip_address):
+        """Sets the ip_address of this SubmissionDataRequest.
+
+
+        :param ip_address: The ip_address of this SubmissionDataRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._ip_address = ip_address
+
+    @property
+    def user_agent(self):
+        """Gets the user_agent of this SubmissionDataRequest.  # noqa: E501
+
+
+        :return: The user_agent of this SubmissionDataRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_agent
+
+    @user_agent.setter
+    def user_agent(self, user_agent):
+        """Sets the user_agent of this SubmissionDataRequest.
+
+
+        :param user_agent: The user_agent of this SubmissionDataRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._user_agent = user_agent
 
     def to_dict(self):
         """Returns the model properties as a dict"""

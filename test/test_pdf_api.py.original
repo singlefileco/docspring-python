@@ -89,22 +89,29 @@ class TestPDFApi(unittest.TestCase):
         """
         create_folder_data = docspring.CreateFolderData() # CreateFolderData | 
         api_response = self.api.create_folder(create_folder_data)
-    def test_create_template(self):
-        """Test case for create_template
+    def test_create_html_template(self):
+        """Test case for create_html_template
 
-        Upload a new PDF template with a file upload  # noqa: E501
+        Create a new HTML template  # noqa: E501
+        """
+        create_template_data1 = docspring.CreateTemplateData1() # CreateTemplateData1 | 
+        api_response = self.api.create_html_template(create_template_data1)
+    def test_create_pdf_template(self):
+        """Test case for create_pdf_template
+
+        Create a new PDF template with a form POST file upload  # noqa: E501
         """
         template_document = '/path/to/file' # file | 
         template_name = 'template_name_example' # str | 
         template_parent_folder_id = 'template_parent_folder_id_example' # str |  (optional)
-        api_response = self.api.create_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
-    def test_create_template_from_upload(self):
-        """Test case for create_template_from_upload
+        api_response = self.api.create_pdf_template(template_document, template_name, template_parent_folder_id=template_parent_folder_id)
+    def test_create_pdf_template_from_upload(self):
+        """Test case for create_pdf_template_from_upload
 
         Create a new PDF template from a cached presign upload  # noqa: E501
         """
         create_template_data = docspring.CreateTemplateData() # CreateTemplateData | 
-        api_response = self.api.create_template_from_upload(create_template_data)
+        api_response = self.api.create_pdf_template_from_upload(create_template_data)
     def test_delete_folder(self):
         """Test case for delete_folder
 
@@ -238,6 +245,14 @@ class TestPDFApi(unittest.TestCase):
         data_request_id = 'drq_000000000000000001' # str | 
         update_submission_data_request_data = docspring.UpdateSubmissionDataRequestData() # UpdateSubmissionDataRequestData | 
         api_response = self.api.update_data_request(data_request_id, update_submission_data_request_data)
+    def test_update_template(self):
+        """Test case for update_template
+
+        Update a Template  # noqa: E501
+        """
+        template_id = 'tpl_000000000000000003' # str | 
+        update_template_data = docspring.UpdateTemplateData() # UpdateTemplateData | 
+        api_response = self.api.update_template(template_id, update_template_data)
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,9 +1,9 @@
-# Templatesv2TemplateDocument
+# TemplatesdesccachedUploadTemplateDocument
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**Templatesv2TemplateDocumentMetadata**](Templatesv2TemplateDocumentMetadata.md) |  | [optional] 
+**metadata** | [**TemplatesdesccachedUploadTemplateDocumentMetadata**](TemplatesdesccachedUploadTemplateDocumentMetadata.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 **storage** | **str** |  | [optional] 
 
