@@ -1,4 +1,4 @@
-# TemplatesdesccachedUploadTemplate
+# HtmlTemplateData
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **scss** | **str** |  | [optional] 
 **expire_after** | **float** |  | [optional] 
 **allow_additional_properties** | **bool** |  | [optional] 
-**document** | [**TemplatesdesccachedUploadTemplateDocument**](TemplatesdesccachedUploadTemplateDocument.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **public_submissions** | **bool** |  | [optional] 
 **slack_webhook_url** | **str** |  | [optional] 

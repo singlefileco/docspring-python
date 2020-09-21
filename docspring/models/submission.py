@@ -40,6 +40,7 @@ class Submission(object):
         'processed_at': 'str',
         'state': 'str',
         'metadata': 'object',
+        'truncated_text': 'object',
         'pdf_hash': 'str',
         'download_url': 'str',
         'permanent_download_url': 'str',
@@ -58,6 +59,7 @@ class Submission(object):
         'processed_at': 'processed_at',
         'state': 'state',
         'metadata': 'metadata',
+        'truncated_text': 'truncated_text',
         'pdf_hash': 'pdf_hash',
         'download_url': 'download_url',
         'permanent_download_url': 'permanent_download_url',
@@ -66,7 +68,7 @@ class Submission(object):
         'actions': 'actions'
     }
 
-    def __init__(self, id=None, template_id=None, test=None, editable=None, expired=None, expires_at=None, processed_at=None, state=None, metadata=None, pdf_hash=None, download_url=None, permanent_download_url=None, batch_id=None, data_requests=None, actions=None):  # noqa: E501
+    def __init__(self, id=None, template_id=None, test=None, editable=None, expired=None, expires_at=None, processed_at=None, state=None, metadata=None, truncated_text=None, pdf_hash=None, download_url=None, permanent_download_url=None, batch_id=None, data_requests=None, actions=None):  # noqa: E501
         """Submission - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -78,6 +80,7 @@ class Submission(object):
         self._processed_at = None
         self._state = None
         self._metadata = None
+        self._truncated_text = None
         self._pdf_hash = None
         self._download_url = None
         self._permanent_download_url = None
@@ -100,6 +103,8 @@ class Submission(object):
         self.state = state
         if metadata is not None:
             self.metadata = metadata
+        if truncated_text is not None:
+            self.truncated_text = truncated_text
         if pdf_hash is not None:
             self.pdf_hash = pdf_hash
         if download_url is not None:
@@ -315,6 +320,27 @@ class Submission(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def truncated_text(self):
+        """Gets the truncated_text of this Submission.  # noqa: E501
+
+
+        :return: The truncated_text of this Submission.  # noqa: E501
+        :rtype: object
+        """
+        return self._truncated_text
+
+    @truncated_text.setter
+    def truncated_text(self, truncated_text):
+        """Sets the truncated_text of this Submission.
+
+
+        :param truncated_text: The truncated_text of this Submission.  # noqa: E501
+        :type: object
+        """
+
+        self._truncated_text = truncated_text
 
     @property
     def pdf_hash(self):

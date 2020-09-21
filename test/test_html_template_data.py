@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import docspring
-from docspring.models.create_template_data1 import CreateTemplateData1  # noqa: E501
+from docspring.models.html_template_data import HtmlTemplateData  # noqa: E501
 from docspring.rest import ApiException
 
 
-class TestCreateTemplateData1(unittest.TestCase):
-    """CreateTemplateData1 unit test stubs"""
+class TestHtmlTemplateData(unittest.TestCase):
+    """HtmlTemplateData unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestCreateTemplateData1(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCreateTemplateData1(self):
-        """Test CreateTemplateData1"""
+    def testHtmlTemplateData(self):
+        """Test HtmlTemplateData"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = docspring.models.create_template_data1.CreateTemplateData1()  # noqa: E501
+        # model = docspring.models.html_template_data.HtmlTemplateData()  # noqa: E501
         pass
 
 

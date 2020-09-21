@@ -39,6 +39,14 @@ class TestPDFApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_fields_to_template(self):
+        """Test case for add_fields_to_template
+
+        Add new fields to a Template  # noqa: E501
+        """
+        template_id = 'tpl_000000000000000002' # str | 
+        add_fields_data = docspring.AddFieldsData() # AddFieldsData | 
+        api_response = self.api.add_fields_to_template(template_id, add_fields_data)
     def test_batch_generate_pdf_v1(self):
         """Test case for batch_generate_pdf_v1
 
@@ -94,8 +102,8 @@ class TestPDFApi(unittest.TestCase):
 
         Create a new HTML template  # noqa: E501
         """
-        create_template_data1 = docspring.CreateTemplateData1() # CreateTemplateData1 | 
-        api_response = self.api.create_html_template(create_template_data1)
+        create_html_template_data = docspring.CreateHtmlTemplateData() # CreateHtmlTemplateData | 
+        api_response = self.api.create_html_template(create_html_template_data)
     def test_create_pdf_template(self):
         """Test case for create_pdf_template
 
@@ -110,8 +118,8 @@ class TestPDFApi(unittest.TestCase):
 
         Create a new PDF template from a cached presign upload  # noqa: E501
         """
-        create_template_data = docspring.CreateTemplateData() # CreateTemplateData | 
-        api_response = self.api.create_pdf_template_from_upload(create_template_data)
+        create_template_from_upload_data = docspring.CreateTemplateFromUploadData() # CreateTemplateFromUploadData | 
+        api_response = self.api.create_pdf_template_from_upload(create_template_from_upload_data)
     def test_delete_folder(self):
         """Test case for delete_folder
 

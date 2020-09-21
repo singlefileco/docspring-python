@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **template_type** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **page_dimensions** | **list[list[float]]** |  | [optional] 
+**locked** | **bool** |  | [optional] 
 **redirect_url** | **str** |  | [optional] 
 **document_url** | **str** |  | [optional] 
 

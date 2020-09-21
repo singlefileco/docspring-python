@@ -32,6 +32,112 @@ class PDFApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def add_fields_to_template(self, template_id, add_fields_data, **kwargs):  # noqa: E501
+        """Add new fields to a Template  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_fields_to_template(template_id, add_fields_data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str template_id: (required)
+        :param AddFieldsData add_fields_data: (required)
+        :return: AddFieldsTemplateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.add_fields_to_template_with_http_info(template_id, add_fields_data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.add_fields_to_template_with_http_info(template_id, add_fields_data, **kwargs)  # noqa: E501
+            return data
+
+    def add_fields_to_template_with_http_info(self, template_id, add_fields_data, **kwargs):  # noqa: E501
+        """Add new fields to a Template  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_fields_to_template_with_http_info(template_id, add_fields_data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str template_id: (required)
+        :param AddFieldsData add_fields_data: (required)
+        :return: AddFieldsTemplateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['template_id', 'add_fields_data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_fields_to_template" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in local_var_params or
+                local_var_params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `add_fields_to_template`")  # noqa: E501
+        # verify the required parameter 'add_fields_data' is set
+        if ('add_fields_data' not in local_var_params or
+                local_var_params['add_fields_data'] is None):
+            raise ValueError("Missing the required parameter `add_fields_data` when calling `add_fields_to_template`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'template_id' in local_var_params:
+            path_params['template_id'] = local_var_params['template_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'add_fields_data' in local_var_params:
+            body_params = local_var_params['add_fields_data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['api_token_basic']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/templates/{template_id}/add_fields', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AddFieldsTemplateResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def batch_generate_pdf_v1(self, template_id, request_body, **kwargs):  # noqa: E501
         """Generates multiple PDFs  # noqa: E501
 
@@ -722,37 +828,37 @@ class PDFApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_html_template(self, create_template_data1, **kwargs):  # noqa: E501
+    def create_html_template(self, create_html_template_data, **kwargs):  # noqa: E501
         """Create a new HTML template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_html_template(create_template_data1, async_req=True)
+        >>> thread = api.create_html_template(create_html_template_data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CreateTemplateData1 create_template_data1: (required)
+        :param CreateHtmlTemplateData create_html_template_data: (required)
         :return: PendingTemplate
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_html_template_with_http_info(create_template_data1, **kwargs)  # noqa: E501
+            return self.create_html_template_with_http_info(create_html_template_data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_html_template_with_http_info(create_template_data1, **kwargs)  # noqa: E501
+            (data) = self.create_html_template_with_http_info(create_html_template_data, **kwargs)  # noqa: E501
             return data
 
-    def create_html_template_with_http_info(self, create_template_data1, **kwargs):  # noqa: E501
+    def create_html_template_with_http_info(self, create_html_template_data, **kwargs):  # noqa: E501
         """Create a new HTML template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_html_template_with_http_info(create_template_data1, async_req=True)
+        >>> thread = api.create_html_template_with_http_info(create_html_template_data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CreateTemplateData1 create_template_data1: (required)
+        :param CreateHtmlTemplateData create_html_template_data: (required)
         :return: PendingTemplate
                  If the method is called asynchronously,
                  returns the request thread.
@@ -760,7 +866,7 @@ class PDFApi(object):
 
         local_var_params = locals()
 
-        all_params = ['create_template_data1']  # noqa: E501
+        all_params = ['create_html_template_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -774,10 +880,10 @@ class PDFApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'create_template_data1' is set
-        if ('create_template_data1' not in local_var_params or
-                local_var_params['create_template_data1'] is None):
-            raise ValueError("Missing the required parameter `create_template_data1` when calling `create_html_template`")  # noqa: E501
+        # verify the required parameter 'create_html_template_data' is set
+        if ('create_html_template_data' not in local_var_params or
+                local_var_params['create_html_template_data'] is None):
+            raise ValueError("Missing the required parameter `create_html_template_data` when calling `create_html_template`")  # noqa: E501
 
         collection_formats = {}
 
@@ -791,8 +897,8 @@ class PDFApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_template_data1' in local_var_params:
-            body_params = local_var_params['create_template_data1']
+        if 'create_html_template_data' in local_var_params:
+            body_params = local_var_params['create_html_template_data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -930,37 +1036,37 @@ class PDFApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_pdf_template_from_upload(self, create_template_data, **kwargs):  # noqa: E501
+    def create_pdf_template_from_upload(self, create_template_from_upload_data, **kwargs):  # noqa: E501
         """Create a new PDF template from a cached presign upload  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_pdf_template_from_upload(create_template_data, async_req=True)
+        >>> thread = api.create_pdf_template_from_upload(create_template_from_upload_data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CreateTemplateData create_template_data: (required)
+        :param CreateTemplateFromUploadData create_template_from_upload_data: (required)
         :return: PendingTemplate
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_pdf_template_from_upload_with_http_info(create_template_data, **kwargs)  # noqa: E501
+            return self.create_pdf_template_from_upload_with_http_info(create_template_from_upload_data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_pdf_template_from_upload_with_http_info(create_template_data, **kwargs)  # noqa: E501
+            (data) = self.create_pdf_template_from_upload_with_http_info(create_template_from_upload_data, **kwargs)  # noqa: E501
             return data
 
-    def create_pdf_template_from_upload_with_http_info(self, create_template_data, **kwargs):  # noqa: E501
+    def create_pdf_template_from_upload_with_http_info(self, create_template_from_upload_data, **kwargs):  # noqa: E501
         """Create a new PDF template from a cached presign upload  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_pdf_template_from_upload_with_http_info(create_template_data, async_req=True)
+        >>> thread = api.create_pdf_template_from_upload_with_http_info(create_template_from_upload_data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CreateTemplateData create_template_data: (required)
+        :param CreateTemplateFromUploadData create_template_from_upload_data: (required)
         :return: PendingTemplate
                  If the method is called asynchronously,
                  returns the request thread.
@@ -968,7 +1074,7 @@ class PDFApi(object):
 
         local_var_params = locals()
 
-        all_params = ['create_template_data']  # noqa: E501
+        all_params = ['create_template_from_upload_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -982,10 +1088,10 @@ class PDFApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'create_template_data' is set
-        if ('create_template_data' not in local_var_params or
-                local_var_params['create_template_data'] is None):
-            raise ValueError("Missing the required parameter `create_template_data` when calling `create_pdf_template_from_upload`")  # noqa: E501
+        # verify the required parameter 'create_template_from_upload_data' is set
+        if ('create_template_from_upload_data' not in local_var_params or
+                local_var_params['create_template_from_upload_data'] is None):
+            raise ValueError("Missing the required parameter `create_template_from_upload_data` when calling `create_pdf_template_from_upload`")  # noqa: E501
 
         collection_formats = {}
 
@@ -999,8 +1105,8 @@ class PDFApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_template_data' in local_var_params:
-            body_params = local_var_params['create_template_data']
+        if 'create_template_from_upload_data' in local_var_params:
+            body_params = local_var_params['create_template_from_upload_data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import docspring
-from docspring.models.templatestemplate_id_template import TemplatestemplateIdTemplate  # noqa: E501
+from docspring.models.add_fields_template_response import AddFieldsTemplateResponse  # noqa: E501
 from docspring.rest import ApiException
 
 
-class TestTemplatestemplateIdTemplate(unittest.TestCase):
-    """TemplatestemplateIdTemplate unit test stubs"""
+class TestAddFieldsTemplateResponse(unittest.TestCase):
+    """AddFieldsTemplateResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestTemplatestemplateIdTemplate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testTemplatestemplateIdTemplate(self):
-        """Test TemplatestemplateIdTemplate"""
+    def testAddFieldsTemplateResponse(self):
+        """Test AddFieldsTemplateResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = docspring.models.templatestemplate_id_template.TemplatestemplateIdTemplate()  # noqa: E501
+        # model = docspring.models.add_fields_template_response.AddFieldsTemplateResponse()  # noqa: E501
         pass
 
 

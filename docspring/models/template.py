@@ -48,6 +48,7 @@ class Template(object):
         'template_type': 'str',
         'id': 'str',
         'page_dimensions': 'list[list[float]]',
+        'locked': 'bool',
         'redirect_url': 'str',
         'document_url': 'str'
     }
@@ -70,11 +71,12 @@ class Template(object):
         'template_type': 'template_type',
         'id': 'id',
         'page_dimensions': 'page_dimensions',
+        'locked': 'locked',
         'redirect_url': 'redirect_url',
         'document_url': 'document_url'
     }
 
-    def __init__(self, expiration_interval=None, webhook_url=None, parent_folder_id=None, expire_after=None, allow_additional_properties=None, description=None, public_submissions=None, slack_webhook_url=None, path=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, permanent_document_url=None, template_type=None, id=None, page_dimensions=None, redirect_url=None, document_url=None):  # noqa: E501
+    def __init__(self, expiration_interval=None, webhook_url=None, parent_folder_id=None, expire_after=None, allow_additional_properties=None, description=None, public_submissions=None, slack_webhook_url=None, path=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, permanent_document_url=None, template_type=None, id=None, page_dimensions=None, locked=None, redirect_url=None, document_url=None):  # noqa: E501
         """Template - a model defined in OpenAPI"""  # noqa: E501
 
         self._expiration_interval = None
@@ -94,6 +96,7 @@ class Template(object):
         self._template_type = None
         self._id = None
         self._page_dimensions = None
+        self._locked = None
         self._redirect_url = None
         self._document_url = None
         self.discriminator = None
@@ -132,6 +135,8 @@ class Template(object):
             self.id = id
         if page_dimensions is not None:
             self.page_dimensions = page_dimensions
+        if locked is not None:
+            self.locked = locked
         if redirect_url is not None:
             self.redirect_url = redirect_url
         if document_url is not None:
@@ -499,6 +504,27 @@ class Template(object):
         """
 
         self._page_dimensions = page_dimensions
+
+    @property
+    def locked(self):
+        """Gets the locked of this Template.  # noqa: E501
+
+
+        :return: The locked of this Template.  # noqa: E501
+        :rtype: bool
+        """
+        return self._locked
+
+    @locked.setter
+    def locked(self, locked):
+        """Sets the locked of this Template.
+
+
+        :param locked: The locked of this Template.  # noqa: E501
+        :type: bool
+        """
+
+        self._locked = locked
 
     @property
     def redirect_url(self):

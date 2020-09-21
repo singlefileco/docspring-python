@@ -1,4 +1,4 @@
-# TemplatestemplateIdTemplate
+# UploadTemplateData
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **scss** | **str** |  | [optional] 
 **expire_after** | **float** |  | [optional] 
 **allow_additional_properties** | **bool** |  | [optional] 
+**document** | [**UploadTemplateDataDocument**](UploadTemplateDataDocument.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **public_submissions** | **bool** |  | [optional] 
 **slack_webhook_url** | **str** |  | [optional] 
@@ -18,6 +19,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **html** | **str** |  | [optional] 
 **footer_html** | **str** |  | [optional] 
+**template_type** | **str** |  | [optional] 
 **redirect_url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
