@@ -1019,7 +1019,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = docspring.PDFApi(docspring.ApiClient(configuration))
 submission_id = 'sub_000000000000000001' # str | 
-include_data = false # bool |  (optional)
+include_data = true # bool |  (optional)
 
 try:
     # Check the status of a PDF

@@ -39,6 +39,7 @@ class Submission(object):
         'expires_at': 'str',
         'processed_at': 'str',
         'state': 'str',
+        'data': 'object',
         'metadata': 'object',
         'truncated_text': 'object',
         'pdf_hash': 'str',
@@ -46,7 +47,9 @@ class Submission(object):
         'permanent_download_url': 'str',
         'batch_id': 'str',
         'data_requests': 'list[SubmissionDataRequest]',
-        'actions': 'list[SubmissionAction]'
+        'actions': 'list[SubmissionAction]',
+        'source': 'str',
+        'referrer': 'str'
     }
 
     attribute_map = {
@@ -58,6 +61,7 @@ class Submission(object):
         'expires_at': 'expires_at',
         'processed_at': 'processed_at',
         'state': 'state',
+        'data': 'data',
         'metadata': 'metadata',
         'truncated_text': 'truncated_text',
         'pdf_hash': 'pdf_hash',
@@ -65,10 +69,12 @@ class Submission(object):
         'permanent_download_url': 'permanent_download_url',
         'batch_id': 'batch_id',
         'data_requests': 'data_requests',
-        'actions': 'actions'
+        'actions': 'actions',
+        'source': 'source',
+        'referrer': 'referrer'
     }
 
-    def __init__(self, id=None, template_id=None, test=None, editable=None, expired=None, expires_at=None, processed_at=None, state=None, metadata=None, truncated_text=None, pdf_hash=None, download_url=None, permanent_download_url=None, batch_id=None, data_requests=None, actions=None):  # noqa: E501
+    def __init__(self, id=None, template_id=None, test=None, editable=None, expired=None, expires_at=None, processed_at=None, state=None, data=None, metadata=None, truncated_text=None, pdf_hash=None, download_url=None, permanent_download_url=None, batch_id=None, data_requests=None, actions=None, source=None, referrer=None):  # noqa: E501
         """Submission - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -79,6 +85,7 @@ class Submission(object):
         self._expires_at = None
         self._processed_at = None
         self._state = None
+        self._data = None
         self._metadata = None
         self._truncated_text = None
         self._pdf_hash = None
@@ -87,6 +94,8 @@ class Submission(object):
         self._batch_id = None
         self._data_requests = None
         self._actions = None
+        self._source = None
+        self._referrer = None
         self.discriminator = None
 
         self.id = id
@@ -101,6 +110,8 @@ class Submission(object):
         if processed_at is not None:
             self.processed_at = processed_at
         self.state = state
+        if data is not None:
+            self.data = data
         if metadata is not None:
             self.metadata = metadata
         if truncated_text is not None:
@@ -117,6 +128,10 @@ class Submission(object):
             self.data_requests = data_requests
         if actions is not None:
             self.actions = actions
+        if source is not None:
+            self.source = source
+        if referrer is not None:
+            self.referrer = referrer
 
     @property
     def id(self):
@@ -301,6 +316,27 @@ class Submission(object):
         self._state = state
 
     @property
+    def data(self):
+        """Gets the data of this Submission.  # noqa: E501
+
+
+        :return: The data of this Submission.  # noqa: E501
+        :rtype: object
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this Submission.
+
+
+        :param data: The data of this Submission.  # noqa: E501
+        :type: object
+        """
+
+        self._data = data
+
+    @property
     def metadata(self):
         """Gets the metadata of this Submission.  # noqa: E501
 
@@ -467,6 +503,48 @@ class Submission(object):
         """
 
         self._actions = actions
+
+    @property
+    def source(self):
+        """Gets the source of this Submission.  # noqa: E501
+
+
+        :return: The source of this Submission.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this Submission.
+
+
+        :param source: The source of this Submission.  # noqa: E501
+        :type: str
+        """
+
+        self._source = source
+
+    @property
+    def referrer(self):
+        """Gets the referrer of this Submission.  # noqa: E501
+
+
+        :return: The referrer of this Submission.  # noqa: E501
+        :rtype: str
+        """
+        return self._referrer
+
+    @referrer.setter
+    def referrer(self, referrer):
+        """Sets the referrer of this Submission.
+
+
+        :param referrer: The referrer of this Submission.  # noqa: E501
+        :type: str
+        """
+
+        self._referrer = referrer
 
     def to_dict(self):
         """Returns the model properties as a dict"""
