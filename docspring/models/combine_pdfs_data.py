@@ -31,61 +31,103 @@ class CombinePdfsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'test': 'bool',
-        'source_pdfs': 'list[object]',
-        'metadata': 'object',
+        'delete_custom_files': 'bool',
         'expires_in': 'int',
-        'delete_custom_files': 'bool'
+        'metadata': 'object',
+        'source_pdfs': 'list[object]',
+        'test': 'bool'
     }
 
     attribute_map = {
-        'test': 'test',
-        'source_pdfs': 'source_pdfs',
-        'metadata': 'metadata',
+        'delete_custom_files': 'delete_custom_files',
         'expires_in': 'expires_in',
-        'delete_custom_files': 'delete_custom_files'
+        'metadata': 'metadata',
+        'source_pdfs': 'source_pdfs',
+        'test': 'test'
     }
 
-    def __init__(self, test=None, source_pdfs=None, metadata=None, expires_in=None, delete_custom_files=None):  # noqa: E501
+    def __init__(self, delete_custom_files=None, expires_in=None, metadata=None, source_pdfs=None, test=None):  # noqa: E501
         """CombinePdfsData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._test = None
-        self._source_pdfs = None
-        self._metadata = None
-        self._expires_in = None
         self._delete_custom_files = None
+        self._expires_in = None
+        self._metadata = None
+        self._source_pdfs = None
+        self._test = None
         self.discriminator = None
 
-        if test is not None:
-            self.test = test
-        self.source_pdfs = source_pdfs
-        if metadata is not None:
-            self.metadata = metadata
-        if expires_in is not None:
-            self.expires_in = expires_in
         if delete_custom_files is not None:
             self.delete_custom_files = delete_custom_files
+        if expires_in is not None:
+            self.expires_in = expires_in
+        if metadata is not None:
+            self.metadata = metadata
+        self.source_pdfs = source_pdfs
+        if test is not None:
+            self.test = test
 
     @property
-    def test(self):
-        """Gets the test of this CombinePdfsData.  # noqa: E501
+    def delete_custom_files(self):
+        """Gets the delete_custom_files of this CombinePdfsData.  # noqa: E501
 
 
-        :return: The test of this CombinePdfsData.  # noqa: E501
+        :return: The delete_custom_files of this CombinePdfsData.  # noqa: E501
         :rtype: bool
         """
-        return self._test
+        return self._delete_custom_files
 
-    @test.setter
-    def test(self, test):
-        """Sets the test of this CombinePdfsData.
+    @delete_custom_files.setter
+    def delete_custom_files(self, delete_custom_files):
+        """Sets the delete_custom_files of this CombinePdfsData.
 
 
-        :param test: The test of this CombinePdfsData.  # noqa: E501
+        :param delete_custom_files: The delete_custom_files of this CombinePdfsData.  # noqa: E501
         :type: bool
         """
 
-        self._test = test
+        self._delete_custom_files = delete_custom_files
+
+    @property
+    def expires_in(self):
+        """Gets the expires_in of this CombinePdfsData.  # noqa: E501
+
+
+        :return: The expires_in of this CombinePdfsData.  # noqa: E501
+        :rtype: int
+        """
+        return self._expires_in
+
+    @expires_in.setter
+    def expires_in(self, expires_in):
+        """Sets the expires_in of this CombinePdfsData.
+
+
+        :param expires_in: The expires_in of this CombinePdfsData.  # noqa: E501
+        :type: int
+        """
+
+        self._expires_in = expires_in
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this CombinePdfsData.  # noqa: E501
+
+
+        :return: The metadata of this CombinePdfsData.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this CombinePdfsData.
+
+
+        :param metadata: The metadata of this CombinePdfsData.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
 
     @property
     def source_pdfs(self):
@@ -111,67 +153,25 @@ class CombinePdfsData(object):
         self._source_pdfs = source_pdfs
 
     @property
-    def metadata(self):
-        """Gets the metadata of this CombinePdfsData.  # noqa: E501
+    def test(self):
+        """Gets the test of this CombinePdfsData.  # noqa: E501
 
 
-        :return: The metadata of this CombinePdfsData.  # noqa: E501
-        :rtype: object
-        """
-        return self._metadata
-
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this CombinePdfsData.
-
-
-        :param metadata: The metadata of this CombinePdfsData.  # noqa: E501
-        :type: object
-        """
-
-        self._metadata = metadata
-
-    @property
-    def expires_in(self):
-        """Gets the expires_in of this CombinePdfsData.  # noqa: E501
-
-
-        :return: The expires_in of this CombinePdfsData.  # noqa: E501
-        :rtype: int
-        """
-        return self._expires_in
-
-    @expires_in.setter
-    def expires_in(self, expires_in):
-        """Sets the expires_in of this CombinePdfsData.
-
-
-        :param expires_in: The expires_in of this CombinePdfsData.  # noqa: E501
-        :type: int
-        """
-
-        self._expires_in = expires_in
-
-    @property
-    def delete_custom_files(self):
-        """Gets the delete_custom_files of this CombinePdfsData.  # noqa: E501
-
-
-        :return: The delete_custom_files of this CombinePdfsData.  # noqa: E501
+        :return: The test of this CombinePdfsData.  # noqa: E501
         :rtype: bool
         """
-        return self._delete_custom_files
+        return self._test
 
-    @delete_custom_files.setter
-    def delete_custom_files(self, delete_custom_files):
-        """Sets the delete_custom_files of this CombinePdfsData.
+    @test.setter
+    def test(self, test):
+        """Sets the test of this CombinePdfsData.
 
 
-        :param delete_custom_files: The delete_custom_files of this CombinePdfsData.  # noqa: E501
+        :param test: The test of this CombinePdfsData.  # noqa: E501
         :type: bool
         """
 
-        self._delete_custom_files = delete_custom_files
+        self._test = test
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,9 +34,9 @@ class UploadTemplateData(object):
         'expiration_interval': 'str',
         'webhook_url': 'str',
         'scss': 'str',
-        'expire_after': 'float',
         'allow_additional_properties': 'bool',
         'document': 'UploadTemplateDataDocument',
+        'expire_after': 'float',
         'description': 'str',
         'public_submissions': 'bool',
         'slack_webhook_url': 'str',
@@ -45,8 +45,8 @@ class UploadTemplateData(object):
         'editable_submissions': 'bool',
         'expire_submissions': 'bool',
         'name': 'str',
-        'html': 'str',
         'footer_html': 'str',
+        'html': 'str',
         'template_type': 'str',
         'redirect_url': 'str'
     }
@@ -55,9 +55,9 @@ class UploadTemplateData(object):
         'expiration_interval': 'expiration_interval',
         'webhook_url': 'webhook_url',
         'scss': 'scss',
-        'expire_after': 'expire_after',
         'allow_additional_properties': 'allow_additional_properties',
         'document': 'document',
+        'expire_after': 'expire_after',
         'description': 'description',
         'public_submissions': 'public_submissions',
         'slack_webhook_url': 'slack_webhook_url',
@@ -66,21 +66,21 @@ class UploadTemplateData(object):
         'editable_submissions': 'editable_submissions',
         'expire_submissions': 'expire_submissions',
         'name': 'name',
-        'html': 'html',
         'footer_html': 'footer_html',
+        'html': 'html',
         'template_type': 'template_type',
         'redirect_url': 'redirect_url'
     }
 
-    def __init__(self, expiration_interval=None, webhook_url=None, scss=None, expire_after=None, allow_additional_properties=None, document=None, description=None, public_submissions=None, slack_webhook_url=None, header_html=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, html=None, footer_html=None, template_type=None, redirect_url=None):  # noqa: E501
+    def __init__(self, expiration_interval=None, webhook_url=None, scss=None, allow_additional_properties=None, document=None, expire_after=None, description=None, public_submissions=None, slack_webhook_url=None, header_html=None, public_web_form=None, editable_submissions=None, expire_submissions=None, name=None, footer_html=None, html=None, template_type=None, redirect_url=None):  # noqa: E501
         """UploadTemplateData - a model defined in OpenAPI"""  # noqa: E501
 
         self._expiration_interval = None
         self._webhook_url = None
         self._scss = None
-        self._expire_after = None
         self._allow_additional_properties = None
         self._document = None
+        self._expire_after = None
         self._description = None
         self._public_submissions = None
         self._slack_webhook_url = None
@@ -89,48 +89,39 @@ class UploadTemplateData(object):
         self._editable_submissions = None
         self._expire_submissions = None
         self._name = None
-        self._html = None
         self._footer_html = None
+        self._html = None
         self._template_type = None
         self._redirect_url = None
         self.discriminator = None
 
         if expiration_interval is not None:
             self.expiration_interval = expiration_interval
-        if webhook_url is not None:
-            self.webhook_url = webhook_url
-        if scss is not None:
-            self.scss = scss
-        if expire_after is not None:
-            self.expire_after = expire_after
+        self.webhook_url = webhook_url
+        self.scss = scss
         if allow_additional_properties is not None:
             self.allow_additional_properties = allow_additional_properties
         if document is not None:
             self.document = document
-        if description is not None:
-            self.description = description
+        if expire_after is not None:
+            self.expire_after = expire_after
+        self.description = description
         if public_submissions is not None:
             self.public_submissions = public_submissions
-        if slack_webhook_url is not None:
-            self.slack_webhook_url = slack_webhook_url
-        if header_html is not None:
-            self.header_html = header_html
+        self.slack_webhook_url = slack_webhook_url
+        self.header_html = header_html
         if public_web_form is not None:
             self.public_web_form = public_web_form
         if editable_submissions is not None:
             self.editable_submissions = editable_submissions
         if expire_submissions is not None:
             self.expire_submissions = expire_submissions
-        if name is not None:
-            self.name = name
-        if html is not None:
-            self.html = html
-        if footer_html is not None:
-            self.footer_html = footer_html
+        self.name = name
+        self.footer_html = footer_html
+        self.html = html
         if template_type is not None:
             self.template_type = template_type
-        if redirect_url is not None:
-            self.redirect_url = redirect_url
+        self.redirect_url = redirect_url
 
     @property
     def expiration_interval(self):
@@ -202,27 +193,6 @@ class UploadTemplateData(object):
         self._scss = scss
 
     @property
-    def expire_after(self):
-        """Gets the expire_after of this UploadTemplateData.  # noqa: E501
-
-
-        :return: The expire_after of this UploadTemplateData.  # noqa: E501
-        :rtype: float
-        """
-        return self._expire_after
-
-    @expire_after.setter
-    def expire_after(self, expire_after):
-        """Sets the expire_after of this UploadTemplateData.
-
-
-        :param expire_after: The expire_after of this UploadTemplateData.  # noqa: E501
-        :type: float
-        """
-
-        self._expire_after = expire_after
-
-    @property
     def allow_additional_properties(self):
         """Gets the allow_additional_properties of this UploadTemplateData.  # noqa: E501
 
@@ -263,6 +233,27 @@ class UploadTemplateData(object):
         """
 
         self._document = document
+
+    @property
+    def expire_after(self):
+        """Gets the expire_after of this UploadTemplateData.  # noqa: E501
+
+
+        :return: The expire_after of this UploadTemplateData.  # noqa: E501
+        :rtype: float
+        """
+        return self._expire_after
+
+    @expire_after.setter
+    def expire_after(self, expire_after):
+        """Sets the expire_after of this UploadTemplateData.
+
+
+        :param expire_after: The expire_after of this UploadTemplateData.  # noqa: E501
+        :type: float
+        """
+
+        self._expire_after = expire_after
 
     @property
     def description(self):
@@ -433,27 +424,6 @@ class UploadTemplateData(object):
         self._name = name
 
     @property
-    def html(self):
-        """Gets the html of this UploadTemplateData.  # noqa: E501
-
-
-        :return: The html of this UploadTemplateData.  # noqa: E501
-        :rtype: str
-        """
-        return self._html
-
-    @html.setter
-    def html(self, html):
-        """Sets the html of this UploadTemplateData.
-
-
-        :param html: The html of this UploadTemplateData.  # noqa: E501
-        :type: str
-        """
-
-        self._html = html
-
-    @property
     def footer_html(self):
         """Gets the footer_html of this UploadTemplateData.  # noqa: E501
 
@@ -473,6 +443,27 @@ class UploadTemplateData(object):
         """
 
         self._footer_html = footer_html
+
+    @property
+    def html(self):
+        """Gets the html of this UploadTemplateData.  # noqa: E501
+
+
+        :return: The html of this UploadTemplateData.  # noqa: E501
+        :rtype: str
+        """
+        return self._html
+
+    @html.setter
+    def html(self, html):
+        """Sets the html of this UploadTemplateData.
+
+
+        :param html: The html of this UploadTemplateData.  # noqa: E501
+        :type: str
+        """
+
+        self._html = html
 
     @property
     def template_type(self):

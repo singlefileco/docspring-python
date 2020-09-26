@@ -94,20 +94,16 @@ class PendingTemplate(object):
 
         if expiration_interval is not None:
             self.expiration_interval = expiration_interval
-        if webhook_url is not None:
-            self.webhook_url = webhook_url
-        if parent_folder_id is not None:
-            self.parent_folder_id = parent_folder_id
+        self.webhook_url = webhook_url
+        self.parent_folder_id = parent_folder_id
         if expire_after is not None:
             self.expire_after = expire_after
         if allow_additional_properties is not None:
             self.allow_additional_properties = allow_additional_properties
-        if description is not None:
-            self.description = description
+        self.description = description
         if public_submissions is not None:
             self.public_submissions = public_submissions
-        if slack_webhook_url is not None:
-            self.slack_webhook_url = slack_webhook_url
+        self.slack_webhook_url = slack_webhook_url
         if path is not None:
             self.path = path
         if public_web_form is not None:
@@ -116,16 +112,14 @@ class PendingTemplate(object):
             self.editable_submissions = editable_submissions
         if expire_submissions is not None:
             self.expire_submissions = expire_submissions
-        if name is not None:
-            self.name = name
+        self.name = name
         if template_type is not None:
             self.template_type = template_type
         if id is not None:
             self.id = id
         if locked is not None:
             self.locked = locked
-        if redirect_url is not None:
-            self.redirect_url = redirect_url
+        self.redirect_url = redirect_url
 
     @property
     def expiration_interval(self):

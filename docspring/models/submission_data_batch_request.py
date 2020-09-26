@@ -33,44 +33,43 @@ class SubmissionDataBatchRequest(object):
     openapi_types = {
         'css': 'str',
         'metadata': 'object',
-        'test': 'bool',
         'data': 'object',
-        'template_id': 'str',
-        'html': 'str'
+        'test': 'bool',
+        'html': 'str',
+        'template_id': 'str'
     }
 
     attribute_map = {
         'css': 'css',
         'metadata': 'metadata',
-        'test': 'test',
         'data': 'data',
-        'template_id': 'template_id',
-        'html': 'html'
+        'test': 'test',
+        'html': 'html',
+        'template_id': 'template_id'
     }
 
-    def __init__(self, css=None, metadata=None, test=None, data=None, template_id=None, html=None):  # noqa: E501
+    def __init__(self, css=None, metadata=None, data=None, test=None, html=None, template_id=None):  # noqa: E501
         """SubmissionDataBatchRequest - a model defined in OpenAPI"""  # noqa: E501
 
         self._css = None
         self._metadata = None
-        self._test = None
         self._data = None
-        self._template_id = None
+        self._test = None
         self._html = None
+        self._template_id = None
         self.discriminator = None
 
         if css is not None:
             self.css = css
         if metadata is not None:
             self.metadata = metadata
-        if test is not None:
-            self.test = test
         if data is not None:
             self.data = data
-        if template_id is not None:
-            self.template_id = template_id
+        if test is not None:
+            self.test = test
         if html is not None:
             self.html = html
+        self.template_id = template_id
 
     @property
     def css(self):
@@ -115,27 +114,6 @@ class SubmissionDataBatchRequest(object):
         self._metadata = metadata
 
     @property
-    def test(self):
-        """Gets the test of this SubmissionDataBatchRequest.  # noqa: E501
-
-
-        :return: The test of this SubmissionDataBatchRequest.  # noqa: E501
-        :rtype: bool
-        """
-        return self._test
-
-    @test.setter
-    def test(self, test):
-        """Sets the test of this SubmissionDataBatchRequest.
-
-
-        :param test: The test of this SubmissionDataBatchRequest.  # noqa: E501
-        :type: bool
-        """
-
-        self._test = test
-
-    @property
     def data(self):
         """Gets the data of this SubmissionDataBatchRequest.  # noqa: E501
 
@@ -157,25 +135,25 @@ class SubmissionDataBatchRequest(object):
         self._data = data
 
     @property
-    def template_id(self):
-        """Gets the template_id of this SubmissionDataBatchRequest.  # noqa: E501
+    def test(self):
+        """Gets the test of this SubmissionDataBatchRequest.  # noqa: E501
 
 
-        :return: The template_id of this SubmissionDataBatchRequest.  # noqa: E501
-        :rtype: str
+        :return: The test of this SubmissionDataBatchRequest.  # noqa: E501
+        :rtype: bool
         """
-        return self._template_id
+        return self._test
 
-    @template_id.setter
-    def template_id(self, template_id):
-        """Sets the template_id of this SubmissionDataBatchRequest.
+    @test.setter
+    def test(self, test):
+        """Sets the test of this SubmissionDataBatchRequest.
 
 
-        :param template_id: The template_id of this SubmissionDataBatchRequest.  # noqa: E501
-        :type: str
+        :param test: The test of this SubmissionDataBatchRequest.  # noqa: E501
+        :type: bool
         """
 
-        self._template_id = template_id
+        self._test = test
 
     @property
     def html(self):
@@ -197,6 +175,27 @@ class SubmissionDataBatchRequest(object):
         """
 
         self._html = html
+
+    @property
+    def template_id(self):
+        """Gets the template_id of this SubmissionDataBatchRequest.  # noqa: E501
+
+
+        :return: The template_id of this SubmissionDataBatchRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._template_id
+
+    @template_id.setter
+    def template_id(self, template_id):
+        """Sets the template_id of this SubmissionDataBatchRequest.
+
+
+        :param template_id: The template_id of this SubmissionDataBatchRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._template_id = template_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

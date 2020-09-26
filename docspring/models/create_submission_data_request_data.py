@@ -31,8 +31,8 @@ class CreateSubmissionDataRequestData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'metadata': 'object',
         'auth_type': 'str',
+        'metadata': 'object',
         'auth_second_factor_type': 'str',
         'auth_phone_number_hash': 'str',
         'auth_session_started_at': 'str',
@@ -41,14 +41,14 @@ class CreateSubmissionDataRequestData(object):
         'auth_username_hash': 'str',
         'name': 'str',
         'fields': 'list[str]',
-        'email': 'str',
         'auth_provider': 'str',
+        'email': 'str',
         'order': 'int'
     }
 
     attribute_map = {
-        'metadata': 'metadata',
         'auth_type': 'auth_type',
+        'metadata': 'metadata',
         'auth_second_factor_type': 'auth_second_factor_type',
         'auth_phone_number_hash': 'auth_phone_number_hash',
         'auth_session_started_at': 'auth_session_started_at',
@@ -57,16 +57,16 @@ class CreateSubmissionDataRequestData(object):
         'auth_username_hash': 'auth_username_hash',
         'name': 'name',
         'fields': 'fields',
-        'email': 'email',
         'auth_provider': 'auth_provider',
+        'email': 'email',
         'order': 'order'
     }
 
-    def __init__(self, metadata=None, auth_type=None, auth_second_factor_type=None, auth_phone_number_hash=None, auth_session_started_at=None, auth_user_id_hash=None, auth_session_id_hash=None, auth_username_hash=None, name=None, fields=None, email=None, auth_provider=None, order=None):  # noqa: E501
+    def __init__(self, auth_type=None, metadata=None, auth_second_factor_type=None, auth_phone_number_hash=None, auth_session_started_at=None, auth_user_id_hash=None, auth_session_id_hash=None, auth_username_hash=None, name=None, fields=None, auth_provider=None, email=None, order=None):  # noqa: E501
         """CreateSubmissionDataRequestData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._metadata = None
         self._auth_type = None
+        self._metadata = None
         self._auth_second_factor_type = None
         self._auth_phone_number_hash = None
         self._auth_session_started_at = None
@@ -75,58 +75,28 @@ class CreateSubmissionDataRequestData(object):
         self._auth_username_hash = None
         self._name = None
         self._fields = None
-        self._email = None
         self._auth_provider = None
+        self._email = None
         self._order = None
         self.discriminator = None
 
-        if metadata is not None:
-            self.metadata = metadata
         if auth_type is not None:
             self.auth_type = auth_type
+        if metadata is not None:
+            self.metadata = metadata
         if auth_second_factor_type is not None:
             self.auth_second_factor_type = auth_second_factor_type
-        if auth_phone_number_hash is not None:
-            self.auth_phone_number_hash = auth_phone_number_hash
-        if auth_session_started_at is not None:
-            self.auth_session_started_at = auth_session_started_at
-        if auth_user_id_hash is not None:
-            self.auth_user_id_hash = auth_user_id_hash
-        if auth_session_id_hash is not None:
-            self.auth_session_id_hash = auth_session_id_hash
-        if auth_username_hash is not None:
-            self.auth_username_hash = auth_username_hash
-        if name is not None:
-            self.name = name
-        if fields is not None:
-            self.fields = fields
-        if email is not None:
-            self.email = email
-        if auth_provider is not None:
-            self.auth_provider = auth_provider
+        self.auth_phone_number_hash = auth_phone_number_hash
+        self.auth_session_started_at = auth_session_started_at
+        self.auth_user_id_hash = auth_user_id_hash
+        self.auth_session_id_hash = auth_session_id_hash
+        self.auth_username_hash = auth_username_hash
+        self.name = name
+        self.fields = fields
+        self.auth_provider = auth_provider
+        self.email = email
         if order is not None:
             self.order = order
-
-    @property
-    def metadata(self):
-        """Gets the metadata of this CreateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The metadata of this CreateSubmissionDataRequestData.  # noqa: E501
-        :rtype: object
-        """
-        return self._metadata
-
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this CreateSubmissionDataRequestData.
-
-
-        :param metadata: The metadata of this CreateSubmissionDataRequestData.  # noqa: E501
-        :type: object
-        """
-
-        self._metadata = metadata
 
     @property
     def auth_type(self):
@@ -154,6 +124,27 @@ class CreateSubmissionDataRequestData(object):
             )
 
         self._auth_type = auth_type
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this CreateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The metadata of this CreateSubmissionDataRequestData.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this CreateSubmissionDataRequestData.
+
+
+        :param metadata: The metadata of this CreateSubmissionDataRequestData.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
 
     @property
     def auth_second_factor_type(self):
@@ -330,27 +321,6 @@ class CreateSubmissionDataRequestData(object):
         self._fields = fields
 
     @property
-    def email(self):
-        """Gets the email of this CreateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The email of this CreateSubmissionDataRequestData.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this CreateSubmissionDataRequestData.
-
-
-        :param email: The email of this CreateSubmissionDataRequestData.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
     def auth_provider(self):
         """Gets the auth_provider of this CreateSubmissionDataRequestData.  # noqa: E501
 
@@ -370,6 +340,27 @@ class CreateSubmissionDataRequestData(object):
         """
 
         self._auth_provider = auth_provider
+
+    @property
+    def email(self):
+        """Gets the email of this CreateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The email of this CreateSubmissionDataRequestData.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this CreateSubmissionDataRequestData.
+
+
+        :param email: The email of this CreateSubmissionDataRequestData.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def order(self):

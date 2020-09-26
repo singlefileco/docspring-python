@@ -31,213 +31,115 @@ class UpdateSubmissionDataRequestData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str',
-        'email': 'str',
-        'order': 'int',
-        'fields': 'list[str]',
-        'metadata': 'object',
-        'auth_type': 'str',
-        'auth_second_factor_type': 'str',
+        'auth_phone_number_hash': 'str',
         'auth_provider': 'str',
-        'auth_session_started_at': 'str',
+        'auth_second_factor_type': 'str',
         'auth_session_id_hash': 'str',
+        'auth_session_started_at': 'str',
+        'auth_type': 'str',
         'auth_user_id_hash': 'str',
         'auth_username_hash': 'str',
-        'auth_phone_number_hash': 'str'
+        'email': 'str',
+        'fields': 'list[str]',
+        'metadata': 'object',
+        'name': 'str',
+        'order': 'int'
     }
 
     attribute_map = {
-        'name': 'name',
-        'email': 'email',
-        'order': 'order',
-        'fields': 'fields',
-        'metadata': 'metadata',
-        'auth_type': 'auth_type',
-        'auth_second_factor_type': 'auth_second_factor_type',
+        'auth_phone_number_hash': 'auth_phone_number_hash',
         'auth_provider': 'auth_provider',
-        'auth_session_started_at': 'auth_session_started_at',
+        'auth_second_factor_type': 'auth_second_factor_type',
         'auth_session_id_hash': 'auth_session_id_hash',
+        'auth_session_started_at': 'auth_session_started_at',
+        'auth_type': 'auth_type',
         'auth_user_id_hash': 'auth_user_id_hash',
         'auth_username_hash': 'auth_username_hash',
-        'auth_phone_number_hash': 'auth_phone_number_hash'
+        'email': 'email',
+        'fields': 'fields',
+        'metadata': 'metadata',
+        'name': 'name',
+        'order': 'order'
     }
 
-    def __init__(self, name=None, email=None, order=None, fields=None, metadata=None, auth_type=None, auth_second_factor_type=None, auth_provider=None, auth_session_started_at=None, auth_session_id_hash=None, auth_user_id_hash=None, auth_username_hash=None, auth_phone_number_hash=None):  # noqa: E501
+    def __init__(self, auth_phone_number_hash=None, auth_provider=None, auth_second_factor_type=None, auth_session_id_hash=None, auth_session_started_at=None, auth_type=None, auth_user_id_hash=None, auth_username_hash=None, email=None, fields=None, metadata=None, name=None, order=None):  # noqa: E501
         """UpdateSubmissionDataRequestData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._name = None
-        self._email = None
-        self._order = None
-        self._fields = None
-        self._metadata = None
-        self._auth_type = None
-        self._auth_second_factor_type = None
+        self._auth_phone_number_hash = None
         self._auth_provider = None
-        self._auth_session_started_at = None
+        self._auth_second_factor_type = None
         self._auth_session_id_hash = None
+        self._auth_session_started_at = None
+        self._auth_type = None
         self._auth_user_id_hash = None
         self._auth_username_hash = None
-        self._auth_phone_number_hash = None
+        self._email = None
+        self._fields = None
+        self._metadata = None
+        self._name = None
+        self._order = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if email is not None:
-            self.email = email
-        if order is not None:
-            self.order = order
+        self.auth_phone_number_hash = auth_phone_number_hash
+        self.auth_provider = auth_provider
+        if auth_second_factor_type is not None:
+            self.auth_second_factor_type = auth_second_factor_type
+        self.auth_session_id_hash = auth_session_id_hash
+        self.auth_session_started_at = auth_session_started_at
+        if auth_type is not None:
+            self.auth_type = auth_type
+        self.auth_user_id_hash = auth_user_id_hash
+        self.auth_username_hash = auth_username_hash
+        self.email = email
         if fields is not None:
             self.fields = fields
         if metadata is not None:
             self.metadata = metadata
-        if auth_type is not None:
-            self.auth_type = auth_type
-        if auth_second_factor_type is not None:
-            self.auth_second_factor_type = auth_second_factor_type
-        if auth_provider is not None:
-            self.auth_provider = auth_provider
-        if auth_session_started_at is not None:
-            self.auth_session_started_at = auth_session_started_at
-        if auth_session_id_hash is not None:
-            self.auth_session_id_hash = auth_session_id_hash
-        if auth_user_id_hash is not None:
-            self.auth_user_id_hash = auth_user_id_hash
-        if auth_username_hash is not None:
-            self.auth_username_hash = auth_username_hash
-        if auth_phone_number_hash is not None:
-            self.auth_phone_number_hash = auth_phone_number_hash
+        self.name = name
+        if order is not None:
+            self.order = order
 
     @property
-    def name(self):
-        """Gets the name of this UpdateSubmissionDataRequestData.  # noqa: E501
+    def auth_phone_number_hash(self):
+        """Gets the auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
 
 
-        :return: The name of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :return: The auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._auth_phone_number_hash
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this UpdateSubmissionDataRequestData.
+    @auth_phone_number_hash.setter
+    def auth_phone_number_hash(self, auth_phone_number_hash):
+        """Sets the auth_phone_number_hash of this UpdateSubmissionDataRequestData.
 
 
-        :param name: The name of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :param auth_phone_number_hash: The auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._auth_phone_number_hash = auth_phone_number_hash
 
     @property
-    def email(self):
-        """Gets the email of this UpdateSubmissionDataRequestData.  # noqa: E501
+    def auth_provider(self):
+        """Gets the auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
 
 
-        :return: The email of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :return: The auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
         :rtype: str
         """
-        return self._email
+        return self._auth_provider
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this UpdateSubmissionDataRequestData.
+    @auth_provider.setter
+    def auth_provider(self, auth_provider):
+        """Sets the auth_provider of this UpdateSubmissionDataRequestData.
 
 
-        :param email: The email of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :param auth_provider: The auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
         :type: str
         """
 
-        self._email = email
-
-    @property
-    def order(self):
-        """Gets the order of this UpdateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The order of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :rtype: int
-        """
-        return self._order
-
-    @order.setter
-    def order(self, order):
-        """Sets the order of this UpdateSubmissionDataRequestData.
-
-
-        :param order: The order of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :type: int
-        """
-
-        self._order = order
-
-    @property
-    def fields(self):
-        """Gets the fields of this UpdateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The fields of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """Sets the fields of this UpdateSubmissionDataRequestData.
-
-
-        :param fields: The fields of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._fields = fields
-
-    @property
-    def metadata(self):
-        """Gets the metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :rtype: object
-        """
-        return self._metadata
-
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this UpdateSubmissionDataRequestData.
-
-
-        :param metadata: The metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :type: object
-        """
-
-        self._metadata = metadata
-
-    @property
-    def auth_type(self):
-        """Gets the auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
-
-
-        :return: The auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :rtype: str
-        """
-        return self._auth_type
-
-    @auth_type.setter
-    def auth_type(self, auth_type):
-        """Sets the auth_type of this UpdateSubmissionDataRequestData.
-
-
-        :param auth_type: The auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["none", "password", "oauth", "email_link", "phone_number", "ldap", "saml"]  # noqa: E501
-        if auth_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `auth_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(auth_type, allowed_values)
-            )
-
-        self._auth_type = auth_type
+        self._auth_provider = auth_provider
 
     @property
     def auth_second_factor_type(self):
@@ -267,25 +169,25 @@ class UpdateSubmissionDataRequestData(object):
         self._auth_second_factor_type = auth_second_factor_type
 
     @property
-    def auth_provider(self):
-        """Gets the auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
+    def auth_session_id_hash(self):
+        """Gets the auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
 
 
-        :return: The auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :return: The auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
         :rtype: str
         """
-        return self._auth_provider
+        return self._auth_session_id_hash
 
-    @auth_provider.setter
-    def auth_provider(self, auth_provider):
-        """Sets the auth_provider of this UpdateSubmissionDataRequestData.
+    @auth_session_id_hash.setter
+    def auth_session_id_hash(self, auth_session_id_hash):
+        """Sets the auth_session_id_hash of this UpdateSubmissionDataRequestData.
 
 
-        :param auth_provider: The auth_provider of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :param auth_session_id_hash: The auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
         :type: str
         """
 
-        self._auth_provider = auth_provider
+        self._auth_session_id_hash = auth_session_id_hash
 
     @property
     def auth_session_started_at(self):
@@ -309,25 +211,31 @@ class UpdateSubmissionDataRequestData(object):
         self._auth_session_started_at = auth_session_started_at
 
     @property
-    def auth_session_id_hash(self):
-        """Gets the auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+    def auth_type(self):
+        """Gets the auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
 
 
-        :return: The auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :return: The auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
         :rtype: str
         """
-        return self._auth_session_id_hash
+        return self._auth_type
 
-    @auth_session_id_hash.setter
-    def auth_session_id_hash(self, auth_session_id_hash):
-        """Sets the auth_session_id_hash of this UpdateSubmissionDataRequestData.
+    @auth_type.setter
+    def auth_type(self, auth_type):
+        """Sets the auth_type of this UpdateSubmissionDataRequestData.
 
 
-        :param auth_session_id_hash: The auth_session_id_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :param auth_type: The auth_type of this UpdateSubmissionDataRequestData.  # noqa: E501
         :type: str
         """
+        allowed_values = ["none", "password", "oauth", "email_link", "phone_number", "ldap", "saml"]  # noqa: E501
+        if auth_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `auth_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(auth_type, allowed_values)
+            )
 
-        self._auth_session_id_hash = auth_session_id_hash
+        self._auth_type = auth_type
 
     @property
     def auth_user_id_hash(self):
@@ -372,25 +280,109 @@ class UpdateSubmissionDataRequestData(object):
         self._auth_username_hash = auth_username_hash
 
     @property
-    def auth_phone_number_hash(self):
-        """Gets the auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+    def email(self):
+        """Gets the email of this UpdateSubmissionDataRequestData.  # noqa: E501
 
 
-        :return: The auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :return: The email of this UpdateSubmissionDataRequestData.  # noqa: E501
         :rtype: str
         """
-        return self._auth_phone_number_hash
+        return self._email
 
-    @auth_phone_number_hash.setter
-    def auth_phone_number_hash(self, auth_phone_number_hash):
-        """Sets the auth_phone_number_hash of this UpdateSubmissionDataRequestData.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UpdateSubmissionDataRequestData.
 
 
-        :param auth_phone_number_hash: The auth_phone_number_hash of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :param email: The email of this UpdateSubmissionDataRequestData.  # noqa: E501
         :type: str
         """
 
-        self._auth_phone_number_hash = auth_phone_number_hash
+        self._email = email
+
+    @property
+    def fields(self):
+        """Gets the fields of this UpdateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The fields of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        """Sets the fields of this UpdateSubmissionDataRequestData.
+
+
+        :param fields: The fields of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._fields = fields
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this UpdateSubmissionDataRequestData.
+
+
+        :param metadata: The metadata of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
+
+    @property
+    def name(self):
+        """Gets the name of this UpdateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The name of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this UpdateSubmissionDataRequestData.
+
+
+        :param name: The name of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def order(self):
+        """Gets the order of this UpdateSubmissionDataRequestData.  # noqa: E501
+
+
+        :return: The order of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :rtype: int
+        """
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        """Sets the order of this UpdateSubmissionDataRequestData.
+
+
+        :param order: The order of this UpdateSubmissionDataRequestData.  # noqa: E501
+        :type: int
+        """
+
+        self._order = order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

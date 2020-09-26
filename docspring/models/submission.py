@@ -102,36 +102,26 @@ class Submission(object):
         if template_id is not None:
             self.template_id = template_id
         self.test = test
-        if editable is not None:
-            self.editable = editable
+        self.editable = editable
         self.expired = expired
-        if expires_at is not None:
-            self.expires_at = expires_at
-        if processed_at is not None:
-            self.processed_at = processed_at
+        self.expires_at = expires_at
+        self.processed_at = processed_at
         self.state = state
-        if data is not None:
-            self.data = data
+        self.data = data
         if metadata is not None:
             self.metadata = metadata
         if truncated_text is not None:
             self.truncated_text = truncated_text
-        if pdf_hash is not None:
-            self.pdf_hash = pdf_hash
-        if download_url is not None:
-            self.download_url = download_url
-        if permanent_download_url is not None:
-            self.permanent_download_url = permanent_download_url
-        if batch_id is not None:
-            self.batch_id = batch_id
+        self.pdf_hash = pdf_hash
+        self.download_url = download_url
+        self.permanent_download_url = permanent_download_url
+        self.batch_id = batch_id
         if data_requests is not None:
             self.data_requests = data_requests
         if actions is not None:
             self.actions = actions
-        if source is not None:
-            self.source = source
-        if referrer is not None:
-            self.referrer = referrer
+        self.source = source
+        self.referrer = referrer
 
     @property
     def id(self):

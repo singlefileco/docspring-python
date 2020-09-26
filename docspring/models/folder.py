@@ -55,8 +55,7 @@ class Folder(object):
 
         if path is not None:
             self.path = path
-        if parent_folder_id is not None:
-            self.parent_folder_id = parent_folder_id
+        self.parent_folder_id = parent_folder_id
         if name is not None:
             self.name = name
         if id is not None:

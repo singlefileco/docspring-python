@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.2.1"
+__version__ = "1.3.0"
 
 # import apis into sdk package
 from docspring.api.pdf_api import PDFApi

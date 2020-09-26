@@ -107,8 +107,6 @@ class CombinedSubmissionAction(object):
         :param integration_id: The integration_id of this CombinedSubmissionAction.  # noqa: E501
         :type: str
         """
-        if integration_id is None:
-            raise ValueError("Invalid value for `integration_id`, must not be `None`")  # noqa: E501
 
         self._integration_id = integration_id
 

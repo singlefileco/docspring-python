@@ -75,14 +75,11 @@ class CombinedSubmission(object):
             self.metadata = metadata
         if expired is not None:
             self.expired = expired
-        if expires_at is not None:
-            self.expires_at = expires_at
+        self.expires_at = expires_at
         if source_pdfs is not None:
             self.source_pdfs = source_pdfs
-        if pdf_hash is not None:
-            self.pdf_hash = pdf_hash
-        if download_url is not None:
-            self.download_url = download_url
+        self.pdf_hash = pdf_hash
+        self.download_url = download_url
         if submission_ids is not None:
             self.submission_ids = submission_ids
         if id is not None:

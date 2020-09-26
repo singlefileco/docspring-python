@@ -78,8 +78,7 @@ class SubmissionBatch(object):
             self.total_count = total_count
         if submissions is not None:
             self.submissions = submissions
-        if processed_at is not None:
-            self.processed_at = processed_at
+        self.processed_at = processed_at
         if id is not None:
             self.id = id
         if state is not None:

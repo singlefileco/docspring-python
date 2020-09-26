@@ -31,71 +31,71 @@ class SubmissionData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'test': 'bool',
-        'data': 'object',
-        'html': 'str',
         'css': 'str',
-        'metadata': 'object',
+        'data': 'object',
+        'data_requests': 'list[CreateSubmissionDataRequestData]',
         'field_overrides': 'object',
-        'data_requests': 'list[CreateSubmissionDataRequestData]'
+        'html': 'str',
+        'metadata': 'object',
+        'test': 'bool'
     }
 
     attribute_map = {
-        'test': 'test',
-        'data': 'data',
-        'html': 'html',
         'css': 'css',
-        'metadata': 'metadata',
+        'data': 'data',
+        'data_requests': 'data_requests',
         'field_overrides': 'field_overrides',
-        'data_requests': 'data_requests'
+        'html': 'html',
+        'metadata': 'metadata',
+        'test': 'test'
     }
 
-    def __init__(self, test=None, data=None, html=None, css=None, metadata=None, field_overrides=None, data_requests=None):  # noqa: E501
+    def __init__(self, css=None, data=None, data_requests=None, field_overrides=None, html=None, metadata=None, test=None):  # noqa: E501
         """SubmissionData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._test = None
-        self._data = None
-        self._html = None
         self._css = None
-        self._metadata = None
-        self._field_overrides = None
+        self._data = None
         self._data_requests = None
+        self._field_overrides = None
+        self._html = None
+        self._metadata = None
+        self._test = None
         self.discriminator = None
 
-        if test is not None:
-            self.test = test
-        self.data = data
-        if html is not None:
-            self.html = html
         if css is not None:
             self.css = css
-        if metadata is not None:
-            self.metadata = metadata
-        if field_overrides is not None:
-            self.field_overrides = field_overrides
+        self.data = data
         if data_requests is not None:
             self.data_requests = data_requests
+        if field_overrides is not None:
+            self.field_overrides = field_overrides
+        if html is not None:
+            self.html = html
+        if metadata is not None:
+            self.metadata = metadata
+        if test is not None:
+            self.test = test
 
     @property
-    def test(self):
-        """Gets the test of this SubmissionData.  # noqa: E501
+    def css(self):
+        """Gets the css of this SubmissionData.  # noqa: E501
 
 
-        :return: The test of this SubmissionData.  # noqa: E501
-        :rtype: bool
+        :return: The css of this SubmissionData.  # noqa: E501
+        :rtype: str
         """
-        return self._test
+        return self._css
 
-    @test.setter
-    def test(self, test):
-        """Sets the test of this SubmissionData.
+    @css.setter
+    def css(self, css):
+        """Sets the css of this SubmissionData.
 
 
-        :param test: The test of this SubmissionData.  # noqa: E501
-        :type: bool
+        :param css: The css of this SubmissionData.  # noqa: E501
+        :type: str
         """
 
-        self._test = test
+        self._css = css
 
     @property
     def data(self):
@@ -121,67 +121,25 @@ class SubmissionData(object):
         self._data = data
 
     @property
-    def html(self):
-        """Gets the html of this SubmissionData.  # noqa: E501
+    def data_requests(self):
+        """Gets the data_requests of this SubmissionData.  # noqa: E501
 
 
-        :return: The html of this SubmissionData.  # noqa: E501
-        :rtype: str
+        :return: The data_requests of this SubmissionData.  # noqa: E501
+        :rtype: list[CreateSubmissionDataRequestData]
         """
-        return self._html
+        return self._data_requests
 
-    @html.setter
-    def html(self, html):
-        """Sets the html of this SubmissionData.
-
-
-        :param html: The html of this SubmissionData.  # noqa: E501
-        :type: str
-        """
-
-        self._html = html
-
-    @property
-    def css(self):
-        """Gets the css of this SubmissionData.  # noqa: E501
+    @data_requests.setter
+    def data_requests(self, data_requests):
+        """Sets the data_requests of this SubmissionData.
 
 
-        :return: The css of this SubmissionData.  # noqa: E501
-        :rtype: str
-        """
-        return self._css
-
-    @css.setter
-    def css(self, css):
-        """Sets the css of this SubmissionData.
-
-
-        :param css: The css of this SubmissionData.  # noqa: E501
-        :type: str
+        :param data_requests: The data_requests of this SubmissionData.  # noqa: E501
+        :type: list[CreateSubmissionDataRequestData]
         """
 
-        self._css = css
-
-    @property
-    def metadata(self):
-        """Gets the metadata of this SubmissionData.  # noqa: E501
-
-
-        :return: The metadata of this SubmissionData.  # noqa: E501
-        :rtype: object
-        """
-        return self._metadata
-
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this SubmissionData.
-
-
-        :param metadata: The metadata of this SubmissionData.  # noqa: E501
-        :type: object
-        """
-
-        self._metadata = metadata
+        self._data_requests = data_requests
 
     @property
     def field_overrides(self):
@@ -205,25 +163,67 @@ class SubmissionData(object):
         self._field_overrides = field_overrides
 
     @property
-    def data_requests(self):
-        """Gets the data_requests of this SubmissionData.  # noqa: E501
+    def html(self):
+        """Gets the html of this SubmissionData.  # noqa: E501
 
 
-        :return: The data_requests of this SubmissionData.  # noqa: E501
-        :rtype: list[CreateSubmissionDataRequestData]
+        :return: The html of this SubmissionData.  # noqa: E501
+        :rtype: str
         """
-        return self._data_requests
+        return self._html
 
-    @data_requests.setter
-    def data_requests(self, data_requests):
-        """Sets the data_requests of this SubmissionData.
+    @html.setter
+    def html(self, html):
+        """Sets the html of this SubmissionData.
 
 
-        :param data_requests: The data_requests of this SubmissionData.  # noqa: E501
-        :type: list[CreateSubmissionDataRequestData]
+        :param html: The html of this SubmissionData.  # noqa: E501
+        :type: str
         """
 
-        self._data_requests = data_requests
+        self._html = html
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this SubmissionData.  # noqa: E501
+
+
+        :return: The metadata of this SubmissionData.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this SubmissionData.
+
+
+        :param metadata: The metadata of this SubmissionData.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
+
+    @property
+    def test(self):
+        """Gets the test of this SubmissionData.  # noqa: E501
+
+
+        :return: The test of this SubmissionData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._test
+
+    @test.setter
+    def test(self, test):
+        """Sets the test of this SubmissionData.
+
+
+        :param test: The test of this SubmissionData.  # noqa: E501
+        :type: bool
+        """
+
+        self._test = test
 
     def to_dict(self):
         """Returns the model properties as a dict"""

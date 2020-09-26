@@ -105,30 +105,20 @@ class SubmissionDataRequest(object):
         self.fields = fields
         self.metadata = metadata
         self.state = state
-        if viewed_at is not None:
-            self.viewed_at = viewed_at
-        if completed_at is not None:
-            self.completed_at = completed_at
+        self.viewed_at = viewed_at
+        self.completed_at = completed_at
         if auth_type is not None:
             self.auth_type = auth_type
         if auth_second_factor_type is not None:
             self.auth_second_factor_type = auth_second_factor_type
-        if auth_provider is not None:
-            self.auth_provider = auth_provider
-        if auth_session_started_at is not None:
-            self.auth_session_started_at = auth_session_started_at
-        if auth_session_id_hash is not None:
-            self.auth_session_id_hash = auth_session_id_hash
-        if auth_user_id_hash is not None:
-            self.auth_user_id_hash = auth_user_id_hash
-        if auth_username_hash is not None:
-            self.auth_username_hash = auth_username_hash
-        if auth_phone_number_hash is not None:
-            self.auth_phone_number_hash = auth_phone_number_hash
-        if ip_address is not None:
-            self.ip_address = ip_address
-        if user_agent is not None:
-            self.user_agent = user_agent
+        self.auth_provider = auth_provider
+        self.auth_session_started_at = auth_session_started_at
+        self.auth_session_id_hash = auth_session_id_hash
+        self.auth_user_id_hash = auth_user_id_hash
+        self.auth_username_hash = auth_username_hash
+        self.auth_phone_number_hash = auth_phone_number_hash
+        self.ip_address = ip_address
+        self.user_agent = user_agent
 
     @property
     def id(self):
@@ -171,8 +161,6 @@ class SubmissionDataRequest(object):
         :param name: The name of this SubmissionDataRequest.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -194,8 +182,6 @@ class SubmissionDataRequest(object):
         :param email: The email of this SubmissionDataRequest.  # noqa: E501
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
 
         self._email = email
 
@@ -240,8 +226,6 @@ class SubmissionDataRequest(object):
         :param fields: The fields of this SubmissionDataRequest.  # noqa: E501
         :type: list[str]
         """
-        if fields is None:
-            raise ValueError("Invalid value for `fields`, must not be `None`")  # noqa: E501
 
         self._fields = fields
 

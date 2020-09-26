@@ -31,56 +31,77 @@ class CombinedSubmissionData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'test': 'bool',
-        'submission_ids': 'list[str]',
+        'expires_in': 'int',
         'metadata': 'object',
-        'expires_in': 'int'
+        'submission_ids': 'list[str]',
+        'test': 'bool'
     }
 
     attribute_map = {
-        'test': 'test',
-        'submission_ids': 'submission_ids',
+        'expires_in': 'expires_in',
         'metadata': 'metadata',
-        'expires_in': 'expires_in'
+        'submission_ids': 'submission_ids',
+        'test': 'test'
     }
 
-    def __init__(self, test=None, submission_ids=None, metadata=None, expires_in=None):  # noqa: E501
+    def __init__(self, expires_in=None, metadata=None, submission_ids=None, test=None):  # noqa: E501
         """CombinedSubmissionData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._test = None
-        self._submission_ids = None
-        self._metadata = None
         self._expires_in = None
+        self._metadata = None
+        self._submission_ids = None
+        self._test = None
         self.discriminator = None
 
-        if test is not None:
-            self.test = test
-        self.submission_ids = submission_ids
-        if metadata is not None:
-            self.metadata = metadata
         if expires_in is not None:
             self.expires_in = expires_in
+        if metadata is not None:
+            self.metadata = metadata
+        self.submission_ids = submission_ids
+        if test is not None:
+            self.test = test
 
     @property
-    def test(self):
-        """Gets the test of this CombinedSubmissionData.  # noqa: E501
+    def expires_in(self):
+        """Gets the expires_in of this CombinedSubmissionData.  # noqa: E501
 
 
-        :return: The test of this CombinedSubmissionData.  # noqa: E501
-        :rtype: bool
+        :return: The expires_in of this CombinedSubmissionData.  # noqa: E501
+        :rtype: int
         """
-        return self._test
+        return self._expires_in
 
-    @test.setter
-    def test(self, test):
-        """Sets the test of this CombinedSubmissionData.
+    @expires_in.setter
+    def expires_in(self, expires_in):
+        """Sets the expires_in of this CombinedSubmissionData.
 
 
-        :param test: The test of this CombinedSubmissionData.  # noqa: E501
-        :type: bool
+        :param expires_in: The expires_in of this CombinedSubmissionData.  # noqa: E501
+        :type: int
         """
 
-        self._test = test
+        self._expires_in = expires_in
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this CombinedSubmissionData.  # noqa: E501
+
+
+        :return: The metadata of this CombinedSubmissionData.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this CombinedSubmissionData.
+
+
+        :param metadata: The metadata of this CombinedSubmissionData.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
 
     @property
     def submission_ids(self):
@@ -106,46 +127,25 @@ class CombinedSubmissionData(object):
         self._submission_ids = submission_ids
 
     @property
-    def metadata(self):
-        """Gets the metadata of this CombinedSubmissionData.  # noqa: E501
+    def test(self):
+        """Gets the test of this CombinedSubmissionData.  # noqa: E501
 
 
-        :return: The metadata of this CombinedSubmissionData.  # noqa: E501
-        :rtype: object
+        :return: The test of this CombinedSubmissionData.  # noqa: E501
+        :rtype: bool
         """
-        return self._metadata
+        return self._test
 
-    @metadata.setter
-    def metadata(self, metadata):
-        """Sets the metadata of this CombinedSubmissionData.
-
-
-        :param metadata: The metadata of this CombinedSubmissionData.  # noqa: E501
-        :type: object
-        """
-
-        self._metadata = metadata
-
-    @property
-    def expires_in(self):
-        """Gets the expires_in of this CombinedSubmissionData.  # noqa: E501
+    @test.setter
+    def test(self, test):
+        """Sets the test of this CombinedSubmissionData.
 
 
-        :return: The expires_in of this CombinedSubmissionData.  # noqa: E501
-        :rtype: int
-        """
-        return self._expires_in
-
-    @expires_in.setter
-    def expires_in(self, expires_in):
-        """Sets the expires_in of this CombinedSubmissionData.
-
-
-        :param expires_in: The expires_in of this CombinedSubmissionData.  # noqa: E501
-        :type: int
+        :param test: The test of this CombinedSubmissionData.  # noqa: E501
+        :type: bool
         """
 
-        self._expires_in = expires_in
+        self._test = test
 
     def to_dict(self):
         """Returns the model properties as a dict"""

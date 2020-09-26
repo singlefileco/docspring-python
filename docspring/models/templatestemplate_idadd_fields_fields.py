@@ -31,8 +31,8 @@ class TemplatestemplateIdaddFieldsFields(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'uppercase': 'bool',
         'background_color_field_name': 'str',
+        'uppercase': 'bool',
         'metadata': 'str',
         'barcode_symbology': 'str',
         'min_length': 'float',
@@ -51,19 +51,19 @@ class TemplatestemplateIdaddFieldsFields(object):
         'height': 'float',
         'number_condition_range_exclusive_max': 'bool',
         'invert_boolean_condition': 'bool',
-        'static': 'bool',
         'shape_fill_color_field_name': 'str',
+        'static': 'bool',
         'shape_border_color_field_name': 'str',
         'v_alignment': 'str',
         'bold': 'bool',
         'shape_border_width': 'float',
         'comb_number_of_cells': 'float',
         'shape_border_color': 'str',
-        'typeface': 'str',
         'comb': 'bool',
+        'typeface': 'str',
         'shape_type': 'str',
-        'display_type': 'str',
         'condition': 'str',
+        'display_type': 'str',
         'check_color': 'str',
         'multiline_lines': 'float',
         'multiline': 'bool',
@@ -77,8 +77,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         'color_field_name': 'str',
         'qrcode_color_field_name': 'str',
         'number_condition_range_min': 'float',
-        'hidden': 'bool',
         'color': 'str',
+        'hidden': 'bool',
         'check_color_field_required': 'bool',
         'combined_field_format': 'str',
         'description': 'str',
@@ -93,8 +93,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         'date_time_format': 'str',
         'qrcode_color_field_required': 'bool',
         'currency': 'bool',
-        'strikethrough': 'bool',
         'false_text': 'str',
+        'strikethrough': 'bool',
         'character_spacing': 'float',
         'number_condition_range_max': 'float',
         'background_color': 'str',
@@ -105,22 +105,22 @@ class TemplatestemplateIdaddFieldsFields(object):
         'shape_fill_color': 'str',
         'string_condition_type': 'str',
         'shape_fill_color_field_required': 'bool',
-        'include_time': 'bool',
         'decimal_places': 'float',
-        'x': 'float',
+        'include_time': 'bool',
         'width': 'float',
+        'x': 'float',
         'maximum': 'float',
         'y': 'float',
         'signature_allow_draw': 'bool',
-        'opacity': 'float',
         'number_condition_type': 'str',
+        'opacity': 'float',
         'minimum': 'float',
         'signature_allow_type': 'bool'
     }
 
     attribute_map = {
-        'uppercase': 'uppercase',
         'background_color_field_name': 'backgroundColorFieldName',
+        'uppercase': 'uppercase',
         'metadata': 'metadata',
         'barcode_symbology': 'barcodeSymbology',
         'min_length': 'minLength',
@@ -139,19 +139,19 @@ class TemplatestemplateIdaddFieldsFields(object):
         'height': 'height',
         'number_condition_range_exclusive_max': 'numberConditionRangeExclusiveMax',
         'invert_boolean_condition': 'invertBooleanCondition',
-        'static': 'static',
         'shape_fill_color_field_name': 'shapeFillColorFieldName',
+        'static': 'static',
         'shape_border_color_field_name': 'shapeBorderColorFieldName',
         'v_alignment': 'vAlignment',
         'bold': 'bold',
         'shape_border_width': 'shapeBorderWidth',
         'comb_number_of_cells': 'combNumberOfCells',
         'shape_border_color': 'shapeBorderColor',
-        'typeface': 'typeface',
         'comb': 'comb',
+        'typeface': 'typeface',
         'shape_type': 'shapeType',
-        'display_type': 'displayType',
         'condition': 'condition',
+        'display_type': 'displayType',
         'check_color': 'checkColor',
         'multiline_lines': 'multilineLines',
         'multiline': 'multiline',
@@ -165,8 +165,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         'color_field_name': 'colorFieldName',
         'qrcode_color_field_name': 'qrcodeColorFieldName',
         'number_condition_range_min': 'numberConditionRangeMin',
-        'hidden': 'hidden',
         'color': 'color',
+        'hidden': 'hidden',
         'check_color_field_required': 'checkColorFieldRequired',
         'combined_field_format': 'combinedFieldFormat',
         'description': 'description',
@@ -181,8 +181,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         'date_time_format': 'dateTimeFormat',
         'qrcode_color_field_required': 'qrcodeColorFieldRequired',
         'currency': 'currency',
-        'strikethrough': 'strikethrough',
         'false_text': 'falseText',
+        'strikethrough': 'strikethrough',
         'character_spacing': 'characterSpacing',
         'number_condition_range_max': 'numberConditionRangeMax',
         'background_color': 'backgroundColor',
@@ -193,24 +193,24 @@ class TemplatestemplateIdaddFieldsFields(object):
         'shape_fill_color': 'shapeFillColor',
         'string_condition_type': 'stringConditionType',
         'shape_fill_color_field_required': 'shapeFillColorFieldRequired',
-        'include_time': 'includeTime',
         'decimal_places': 'decimalPlaces',
-        'x': 'x',
+        'include_time': 'includeTime',
         'width': 'width',
+        'x': 'x',
         'maximum': 'maximum',
         'y': 'y',
         'signature_allow_draw': 'signatureAllowDraw',
-        'opacity': 'opacity',
         'number_condition_type': 'numberConditionType',
+        'opacity': 'opacity',
         'minimum': 'minimum',
         'signature_allow_type': 'signatureAllowType'
     }
 
-    def __init__(self, uppercase=None, background_color_field_name=None, metadata=None, barcode_symbology=None, min_length=None, integer=None, type=None, required=None, comb_value_offset=None, image_gravity=None, overflow=None, qrcode_color=None, color_field_required=None, background_color_field_required=None, id=None, image_scale_type=None, exclusive_minimum=None, height=None, number_condition_range_exclusive_max=None, invert_boolean_condition=None, static=None, shape_fill_color_field_name=None, shape_border_color_field_name=None, v_alignment=None, bold=None, shape_border_width=None, comb_number_of_cells=None, shape_border_color=None, typeface=None, comb=None, shape_type=None, display_type=None, condition=None, check_color=None, multiline_lines=None, multiline=None, true_text=None, name=None, font_size=None, page=None, alignment=None, max_length=None, auto_calculate_max_length=None, color_field_name=None, qrcode_color_field_name=None, number_condition_range_min=None, hidden=None, color=None, check_color_field_required=None, combined_field_format=None, description=None, shape_border_color_field_required=None, combined_field_names=None, title=None, number_condition_range_exclusive_min=None, combined_field_separator=None, exclusive_maximum=None, default=None, combined_field_type=None, date_time_format=None, qrcode_color_field_required=None, currency=None, strikethrough=None, false_text=None, character_spacing=None, number_condition_range_max=None, background_color=None, check_color_field_name=None, check_character=None, rotation=None, option_list=None, shape_fill_color=None, string_condition_type=None, shape_fill_color_field_required=None, include_time=None, decimal_places=None, x=None, width=None, maximum=None, y=None, signature_allow_draw=None, opacity=None, number_condition_type=None, minimum=None, signature_allow_type=None):  # noqa: E501
+    def __init__(self, background_color_field_name=None, uppercase=None, metadata=None, barcode_symbology=None, min_length=None, integer=None, type=None, required=None, comb_value_offset=None, image_gravity=None, overflow=None, qrcode_color=None, color_field_required=None, background_color_field_required=None, id=None, image_scale_type=None, exclusive_minimum=None, height=None, number_condition_range_exclusive_max=None, invert_boolean_condition=None, shape_fill_color_field_name=None, static=None, shape_border_color_field_name=None, v_alignment=None, bold=None, shape_border_width=None, comb_number_of_cells=None, shape_border_color=None, comb=None, typeface=None, shape_type=None, condition=None, display_type=None, check_color=None, multiline_lines=None, multiline=None, true_text=None, name=None, font_size=None, page=None, alignment=None, max_length=None, auto_calculate_max_length=None, color_field_name=None, qrcode_color_field_name=None, number_condition_range_min=None, color=None, hidden=None, check_color_field_required=None, combined_field_format=None, description=None, shape_border_color_field_required=None, combined_field_names=None, title=None, number_condition_range_exclusive_min=None, combined_field_separator=None, exclusive_maximum=None, default=None, combined_field_type=None, date_time_format=None, qrcode_color_field_required=None, currency=None, false_text=None, strikethrough=None, character_spacing=None, number_condition_range_max=None, background_color=None, check_color_field_name=None, check_character=None, rotation=None, option_list=None, shape_fill_color=None, string_condition_type=None, shape_fill_color_field_required=None, decimal_places=None, include_time=None, width=None, x=None, maximum=None, y=None, signature_allow_draw=None, number_condition_type=None, opacity=None, minimum=None, signature_allow_type=None):  # noqa: E501
         """TemplatestemplateIdaddFieldsFields - a model defined in OpenAPI"""  # noqa: E501
 
-        self._uppercase = None
         self._background_color_field_name = None
+        self._uppercase = None
         self._metadata = None
         self._barcode_symbology = None
         self._min_length = None
@@ -229,19 +229,19 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._height = None
         self._number_condition_range_exclusive_max = None
         self._invert_boolean_condition = None
-        self._static = None
         self._shape_fill_color_field_name = None
+        self._static = None
         self._shape_border_color_field_name = None
         self._v_alignment = None
         self._bold = None
         self._shape_border_width = None
         self._comb_number_of_cells = None
         self._shape_border_color = None
-        self._typeface = None
         self._comb = None
+        self._typeface = None
         self._shape_type = None
-        self._display_type = None
         self._condition = None
+        self._display_type = None
         self._check_color = None
         self._multiline_lines = None
         self._multiline = None
@@ -255,8 +255,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._color_field_name = None
         self._qrcode_color_field_name = None
         self._number_condition_range_min = None
-        self._hidden = None
         self._color = None
+        self._hidden = None
         self._check_color_field_required = None
         self._combined_field_format = None
         self._description = None
@@ -271,8 +271,8 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._date_time_format = None
         self._qrcode_color_field_required = None
         self._currency = None
-        self._strikethrough = None
         self._false_text = None
+        self._strikethrough = None
         self._character_spacing = None
         self._number_condition_range_max = None
         self._background_color = None
@@ -283,23 +283,23 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._shape_fill_color = None
         self._string_condition_type = None
         self._shape_fill_color_field_required = None
-        self._include_time = None
         self._decimal_places = None
-        self._x = None
+        self._include_time = None
         self._width = None
+        self._x = None
         self._maximum = None
         self._y = None
         self._signature_allow_draw = None
-        self._opacity = None
         self._number_condition_type = None
+        self._opacity = None
         self._minimum = None
         self._signature_allow_type = None
         self.discriminator = None
 
-        if uppercase is not None:
-            self.uppercase = uppercase
         if background_color_field_name is not None:
             self.background_color_field_name = background_color_field_name
+        if uppercase is not None:
+            self.uppercase = uppercase
         if metadata is not None:
             self.metadata = metadata
         if barcode_symbology is not None:
@@ -336,10 +336,10 @@ class TemplatestemplateIdaddFieldsFields(object):
             self.number_condition_range_exclusive_max = number_condition_range_exclusive_max
         if invert_boolean_condition is not None:
             self.invert_boolean_condition = invert_boolean_condition
-        if static is not None:
-            self.static = static
         if shape_fill_color_field_name is not None:
             self.shape_fill_color_field_name = shape_fill_color_field_name
+        if static is not None:
+            self.static = static
         if shape_border_color_field_name is not None:
             self.shape_border_color_field_name = shape_border_color_field_name
         if v_alignment is not None:
@@ -352,16 +352,16 @@ class TemplatestemplateIdaddFieldsFields(object):
             self.comb_number_of_cells = comb_number_of_cells
         if shape_border_color is not None:
             self.shape_border_color = shape_border_color
-        if typeface is not None:
-            self.typeface = typeface
         if comb is not None:
             self.comb = comb
+        if typeface is not None:
+            self.typeface = typeface
         if shape_type is not None:
             self.shape_type = shape_type
-        if display_type is not None:
-            self.display_type = display_type
         if condition is not None:
             self.condition = condition
+        if display_type is not None:
+            self.display_type = display_type
         if check_color is not None:
             self.check_color = check_color
         if multiline_lines is not None:
@@ -388,10 +388,10 @@ class TemplatestemplateIdaddFieldsFields(object):
             self.qrcode_color_field_name = qrcode_color_field_name
         if number_condition_range_min is not None:
             self.number_condition_range_min = number_condition_range_min
-        if hidden is not None:
-            self.hidden = hidden
         if color is not None:
             self.color = color
+        if hidden is not None:
+            self.hidden = hidden
         if check_color_field_required is not None:
             self.check_color_field_required = check_color_field_required
         if combined_field_format is not None:
@@ -420,10 +420,10 @@ class TemplatestemplateIdaddFieldsFields(object):
             self.qrcode_color_field_required = qrcode_color_field_required
         if currency is not None:
             self.currency = currency
-        if strikethrough is not None:
-            self.strikethrough = strikethrough
         if false_text is not None:
             self.false_text = false_text
+        if strikethrough is not None:
+            self.strikethrough = strikethrough
         if character_spacing is not None:
             self.character_spacing = character_spacing
         if number_condition_range_max is not None:
@@ -444,49 +444,28 @@ class TemplatestemplateIdaddFieldsFields(object):
             self.string_condition_type = string_condition_type
         if shape_fill_color_field_required is not None:
             self.shape_fill_color_field_required = shape_fill_color_field_required
-        if include_time is not None:
-            self.include_time = include_time
         if decimal_places is not None:
             self.decimal_places = decimal_places
-        if x is not None:
-            self.x = x
+        if include_time is not None:
+            self.include_time = include_time
         if width is not None:
             self.width = width
+        if x is not None:
+            self.x = x
         if maximum is not None:
             self.maximum = maximum
         if y is not None:
             self.y = y
         if signature_allow_draw is not None:
             self.signature_allow_draw = signature_allow_draw
-        if opacity is not None:
-            self.opacity = opacity
         if number_condition_type is not None:
             self.number_condition_type = number_condition_type
+        if opacity is not None:
+            self.opacity = opacity
         if minimum is not None:
             self.minimum = minimum
         if signature_allow_type is not None:
             self.signature_allow_type = signature_allow_type
-
-    @property
-    def uppercase(self):
-        """Gets the uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: bool
-        """
-        return self._uppercase
-
-    @uppercase.setter
-    def uppercase(self, uppercase):
-        """Sets the uppercase of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param uppercase: The uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: bool
-        """
-
-        self._uppercase = uppercase
 
     @property
     def background_color_field_name(self):
@@ -508,6 +487,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         """
 
         self._background_color_field_name = background_color_field_name
+
+    @property
+    def uppercase(self):
+        """Gets the uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: bool
+        """
+        return self._uppercase
+
+    @uppercase.setter
+    def uppercase(self, uppercase):
+        """Sets the uppercase of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param uppercase: The uppercase of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: bool
+        """
+
+        self._uppercase = uppercase
 
     @property
     def metadata(self):
@@ -916,27 +916,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._invert_boolean_condition = invert_boolean_condition
 
     @property
-    def static(self):
-        """Gets the static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: bool
-        """
-        return self._static
-
-    @static.setter
-    def static(self, static):
-        """Sets the static of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param static: The static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: bool
-        """
-
-        self._static = static
-
-    @property
     def shape_fill_color_field_name(self):
         """Gets the shape_fill_color_field_name of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -956,6 +935,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         """
 
         self._shape_fill_color_field_name = shape_fill_color_field_name
+
+    @property
+    def static(self):
+        """Gets the static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: bool
+        """
+        return self._static
+
+    @static.setter
+    def static(self, static):
+        """Sets the static of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param static: The static of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: bool
+        """
+
+        self._static = static
 
     @property
     def shape_border_color_field_name(self):
@@ -1094,27 +1094,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._shape_border_color = shape_border_color
 
     @property
-    def typeface(self):
-        """Gets the typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: str
-        """
-        return self._typeface
-
-    @typeface.setter
-    def typeface(self, typeface):
-        """Sets the typeface of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param typeface: The typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: str
-        """
-
-        self._typeface = typeface
-
-    @property
     def comb(self):
         """Gets the comb of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -1134,6 +1113,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         """
 
         self._comb = comb
+
+    @property
+    def typeface(self):
+        """Gets the typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._typeface
+
+    @typeface.setter
+    def typeface(self, typeface):
+        """Sets the typeface of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param typeface: The typeface of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: str
+        """
+
+        self._typeface = typeface
 
     @property
     def shape_type(self):
@@ -1163,6 +1163,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._shape_type = shape_type
 
     @property
+    def condition(self):
+        """Gets the condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._condition
+
+    @condition.setter
+    def condition(self, condition):
+        """Sets the condition of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param condition: The condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: str
+        """
+
+        self._condition = condition
+
+    @property
     def display_type(self):
         """Gets the display_type of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -1188,27 +1209,6 @@ class TemplatestemplateIdaddFieldsFields(object):
             )
 
         self._display_type = display_type
-
-    @property
-    def condition(self):
-        """Gets the condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: str
-        """
-        return self._condition
-
-    @condition.setter
-    def condition(self, condition):
-        """Sets the condition of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param condition: The condition of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: str
-        """
-
-        self._condition = condition
 
     @property
     def check_color(self):
@@ -1496,27 +1496,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._number_condition_range_min = number_condition_range_min
 
     @property
-    def hidden(self):
-        """Gets the hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: bool
-        """
-        return self._hidden
-
-    @hidden.setter
-    def hidden(self, hidden):
-        """Sets the hidden of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param hidden: The hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: bool
-        """
-
-        self._hidden = hidden
-
-    @property
     def color(self):
         """Gets the color of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -1536,6 +1515,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         """
 
         self._color = color
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param hidden: The hidden of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     @property
     def check_color_field_required(self):
@@ -1832,27 +1832,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._currency = currency
 
     @property
-    def strikethrough(self):
-        """Gets the strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: bool
-        """
-        return self._strikethrough
-
-    @strikethrough.setter
-    def strikethrough(self, strikethrough):
-        """Sets the strikethrough of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param strikethrough: The strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: bool
-        """
-
-        self._strikethrough = strikethrough
-
-    @property
     def false_text(self):
         """Gets the false_text of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -1872,6 +1851,27 @@ class TemplatestemplateIdaddFieldsFields(object):
         """
 
         self._false_text = false_text
+
+    @property
+    def strikethrough(self):
+        """Gets the strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: bool
+        """
+        return self._strikethrough
+
+    @strikethrough.setter
+    def strikethrough(self, strikethrough):
+        """Sets the strikethrough of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param strikethrough: The strikethrough of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: bool
+        """
+
+        self._strikethrough = strikethrough
 
     @property
     def character_spacing(self):
@@ -2100,27 +2100,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._shape_fill_color_field_required = shape_fill_color_field_required
 
     @property
-    def include_time(self):
-        """Gets the include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: bool
-        """
-        return self._include_time
-
-    @include_time.setter
-    def include_time(self, include_time):
-        """Sets the include_time of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param include_time: The include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: bool
-        """
-
-        self._include_time = include_time
-
-    @property
     def decimal_places(self):
         """Gets the decimal_places of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -2144,27 +2123,25 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._decimal_places = decimal_places
 
     @property
-    def x(self):
-        """Gets the x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+    def include_time(self):
+        """Gets the include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
 
-        :return: The x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: float
+        :return: The include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: bool
         """
-        return self._x
+        return self._include_time
 
-    @x.setter
-    def x(self, x):
-        """Sets the x of this TemplatestemplateIdaddFieldsFields.
+    @include_time.setter
+    def include_time(self, include_time):
+        """Sets the include_time of this TemplatestemplateIdaddFieldsFields.
 
 
-        :param x: The x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: float
+        :param include_time: The include_time of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: bool
         """
-        if x is not None and x < 0:  # noqa: E501
-            raise ValueError("Invalid value for `x`, must be a value greater than or equal to `0`")  # noqa: E501
 
-        self._x = x
+        self._include_time = include_time
 
     @property
     def width(self):
@@ -2188,6 +2165,29 @@ class TemplatestemplateIdaddFieldsFields(object):
             raise ValueError("Invalid value for `width`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._width = width
+
+    @property
+    def x(self):
+        """Gets the x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: float
+        """
+        return self._x
+
+    @x.setter
+    def x(self, x):
+        """Sets the x of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param x: The x of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: float
+        """
+        if x is not None and x < 0:  # noqa: E501
+            raise ValueError("Invalid value for `x`, must be a value greater than or equal to `0`")  # noqa: E501
+
+        self._x = x
 
     @property
     def maximum(self):
@@ -2255,31 +2255,6 @@ class TemplatestemplateIdaddFieldsFields(object):
         self._signature_allow_draw = signature_allow_draw
 
     @property
-    def opacity(self):
-        """Gets the opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-
-
-        :return: The opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :rtype: float
-        """
-        return self._opacity
-
-    @opacity.setter
-    def opacity(self, opacity):
-        """Sets the opacity of this TemplatestemplateIdaddFieldsFields.
-
-
-        :param opacity: The opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
-        :type: float
-        """
-        if opacity is not None and opacity > 1:  # noqa: E501
-            raise ValueError("Invalid value for `opacity`, must be a value less than or equal to `1`")  # noqa: E501
-        if opacity is not None and opacity < 0:  # noqa: E501
-            raise ValueError("Invalid value for `opacity`, must be a value greater than or equal to `0`")  # noqa: E501
-
-        self._opacity = opacity
-
-    @property
     def number_condition_type(self):
         """Gets the number_condition_type of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
 
@@ -2305,6 +2280,31 @@ class TemplatestemplateIdaddFieldsFields(object):
             )
 
         self._number_condition_type = number_condition_type
+
+    @property
+    def opacity(self):
+        """Gets the opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+
+
+        :return: The opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :rtype: float
+        """
+        return self._opacity
+
+    @opacity.setter
+    def opacity(self, opacity):
+        """Sets the opacity of this TemplatestemplateIdaddFieldsFields.
+
+
+        :param opacity: The opacity of this TemplatestemplateIdaddFieldsFields.  # noqa: E501
+        :type: float
+        """
+        if opacity is not None and opacity > 1:  # noqa: E501
+            raise ValueError("Invalid value for `opacity`, must be a value less than or equal to `1`")  # noqa: E501
+        if opacity is not None and opacity < 0:  # noqa: E501
+            raise ValueError("Invalid value for `opacity`, must be a value greater than or equal to `0`")  # noqa: E501
+
+        self._opacity = opacity
 
     @property
     def minimum(self):

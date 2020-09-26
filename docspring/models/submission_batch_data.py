@@ -32,34 +32,33 @@ class SubmissionBatchData(object):
     """
     openapi_types = {
         'metadata': 'object',
-        'test': 'bool',
+        'submissions': 'list[SubmissionDataBatchRequest]',
         'template_id': 'str',
-        'submissions': 'list[SubmissionDataBatchRequest]'
+        'test': 'bool'
     }
 
     attribute_map = {
         'metadata': 'metadata',
-        'test': 'test',
+        'submissions': 'submissions',
         'template_id': 'template_id',
-        'submissions': 'submissions'
+        'test': 'test'
     }
 
-    def __init__(self, metadata=None, test=None, template_id=None, submissions=None):  # noqa: E501
+    def __init__(self, metadata=None, submissions=None, template_id=None, test=None):  # noqa: E501
         """SubmissionBatchData - a model defined in OpenAPI"""  # noqa: E501
 
         self._metadata = None
-        self._test = None
-        self._template_id = None
         self._submissions = None
+        self._template_id = None
+        self._test = None
         self.discriminator = None
 
         if metadata is not None:
             self.metadata = metadata
+        self.submissions = submissions
+        self.template_id = template_id
         if test is not None:
             self.test = test
-        if template_id is not None:
-            self.template_id = template_id
-        self.submissions = submissions
 
     @property
     def metadata(self):
@@ -83,25 +82,27 @@ class SubmissionBatchData(object):
         self._metadata = metadata
 
     @property
-    def test(self):
-        """Gets the test of this SubmissionBatchData.  # noqa: E501
+    def submissions(self):
+        """Gets the submissions of this SubmissionBatchData.  # noqa: E501
 
 
-        :return: The test of this SubmissionBatchData.  # noqa: E501
-        :rtype: bool
+        :return: The submissions of this SubmissionBatchData.  # noqa: E501
+        :rtype: list[SubmissionDataBatchRequest]
         """
-        return self._test
+        return self._submissions
 
-    @test.setter
-    def test(self, test):
-        """Sets the test of this SubmissionBatchData.
+    @submissions.setter
+    def submissions(self, submissions):
+        """Sets the submissions of this SubmissionBatchData.
 
 
-        :param test: The test of this SubmissionBatchData.  # noqa: E501
-        :type: bool
+        :param submissions: The submissions of this SubmissionBatchData.  # noqa: E501
+        :type: list[SubmissionDataBatchRequest]
         """
+        if submissions is None:
+            raise ValueError("Invalid value for `submissions`, must not be `None`")  # noqa: E501
 
-        self._test = test
+        self._submissions = submissions
 
     @property
     def template_id(self):
@@ -125,27 +126,25 @@ class SubmissionBatchData(object):
         self._template_id = template_id
 
     @property
-    def submissions(self):
-        """Gets the submissions of this SubmissionBatchData.  # noqa: E501
+    def test(self):
+        """Gets the test of this SubmissionBatchData.  # noqa: E501
 
 
-        :return: The submissions of this SubmissionBatchData.  # noqa: E501
-        :rtype: list[SubmissionDataBatchRequest]
+        :return: The test of this SubmissionBatchData.  # noqa: E501
+        :rtype: bool
         """
-        return self._submissions
+        return self._test
 
-    @submissions.setter
-    def submissions(self, submissions):
-        """Sets the submissions of this SubmissionBatchData.
+    @test.setter
+    def test(self, test):
+        """Sets the test of this SubmissionBatchData.
 
 
-        :param submissions: The submissions of this SubmissionBatchData.  # noqa: E501
-        :type: list[SubmissionDataBatchRequest]
+        :param test: The test of this SubmissionBatchData.  # noqa: E501
+        :type: bool
         """
-        if submissions is None:
-            raise ValueError("Invalid value for `submissions`, must not be `None`")  # noqa: E501
 
-        self._submissions = submissions
+        self._test = test
 
     def to_dict(self):
         """Returns the model properties as a dict"""
