@@ -76,6 +76,14 @@ class TestPDFApi(unittest.TestCase):
         """
         combined_submission_data = docspring.CombinedSubmissionData() # CombinedSubmissionData | 
         api_response = self.api.combine_submissions(combined_submission_data)
+    def test_copy_template(self):
+        """Test case for copy_template
+
+        Copy a Template  # noqa: E501
+        """
+        template_id = 'tpl_000000000000000001' # str | 
+        copy_template_data = docspring.CopyTemplateData() # CopyTemplateData | 
+        api_response = self.api.copy_template(template_id, copy_template_data)
     def test_create_custom_file_from_upload(self):
         """Test case for create_custom_file_from_upload
 

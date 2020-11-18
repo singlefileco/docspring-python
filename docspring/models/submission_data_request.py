@@ -35,6 +35,7 @@ class SubmissionDataRequest(object):
         'name': 'str',
         'email': 'str',
         'order': 'int',
+        'sort_order': 'int',
         'fields': 'list[str]',
         'metadata': 'object',
         'state': 'str',
@@ -57,6 +58,7 @@ class SubmissionDataRequest(object):
         'name': 'name',
         'email': 'email',
         'order': 'order',
+        'sort_order': 'sort_order',
         'fields': 'fields',
         'metadata': 'metadata',
         'state': 'state',
@@ -74,13 +76,14 @@ class SubmissionDataRequest(object):
         'user_agent': 'user_agent'
     }
 
-    def __init__(self, id=None, name=None, email=None, order=None, fields=None, metadata=None, state=None, viewed_at=None, completed_at=None, auth_type=None, auth_second_factor_type=None, auth_provider=None, auth_session_started_at=None, auth_session_id_hash=None, auth_user_id_hash=None, auth_username_hash=None, auth_phone_number_hash=None, ip_address=None, user_agent=None):  # noqa: E501
+    def __init__(self, id=None, name=None, email=None, order=None, sort_order=None, fields=None, metadata=None, state=None, viewed_at=None, completed_at=None, auth_type=None, auth_second_factor_type=None, auth_provider=None, auth_session_started_at=None, auth_session_id_hash=None, auth_user_id_hash=None, auth_username_hash=None, auth_phone_number_hash=None, ip_address=None, user_agent=None):  # noqa: E501
         """SubmissionDataRequest - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._email = None
         self._order = None
+        self._sort_order = None
         self._fields = None
         self._metadata = None
         self._state = None
@@ -102,6 +105,7 @@ class SubmissionDataRequest(object):
         self.name = name
         self.email = email
         self.order = order
+        self.sort_order = sort_order
         self.fields = fields
         self.metadata = metadata
         self.state = state
@@ -207,6 +211,29 @@ class SubmissionDataRequest(object):
             raise ValueError("Invalid value for `order`, must not be `None`")  # noqa: E501
 
         self._order = order
+
+    @property
+    def sort_order(self):
+        """Gets the sort_order of this SubmissionDataRequest.  # noqa: E501
+
+
+        :return: The sort_order of this SubmissionDataRequest.  # noqa: E501
+        :rtype: int
+        """
+        return self._sort_order
+
+    @sort_order.setter
+    def sort_order(self, sort_order):
+        """Sets the sort_order of this SubmissionDataRequest.
+
+
+        :param sort_order: The sort_order of this SubmissionDataRequest.  # noqa: E501
+        :type: int
+        """
+        if sort_order is None:
+            raise ValueError("Invalid value for `sort_order`, must not be `None`")  # noqa: E501
+
+        self._sort_order = sort_order
 
     @property
     def fields(self):

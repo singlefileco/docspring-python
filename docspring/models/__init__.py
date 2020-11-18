@@ -22,6 +22,7 @@ from docspring.models.combine_pdfs_data import CombinePdfsData
 from docspring.models.combined_submission import CombinedSubmission
 from docspring.models.combined_submission_action import CombinedSubmissionAction
 from docspring.models.combined_submission_data import CombinedSubmissionData
+from docspring.models.copy_template_data import CopyTemplateData
 from docspring.models.create_combined_submission_response import CreateCombinedSubmissionResponse
 from docspring.models.create_custom_file_data import CreateCustomFileData
 from docspring.models.create_custom_file_response import CreateCustomFileResponse
