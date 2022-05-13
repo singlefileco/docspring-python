@@ -13,7 +13,6 @@ from __future__ import absolute_import
 import datetime
 import json
 import mimetypes
-from multiprocessing.pool import ThreadPool
 from concurrent.futures import ThreadPoolExecutor
 import os
 import re
@@ -26,6 +25,29 @@ from six.moves.urllib.parse import quote
 from docspring.configuration import Configuration
 import docspring.models
 from docspring import rest
+
+# Override multiprocessing ThreadPool with a ThreadPoolExecutor that doesn't use any
+# shared memory semaphore locks
+class CustomThreadPool:
+    """FakeThreadPool to replace ThreadPool, that doesn't work on lambdas"""
+
+    def __init__(self, num_threads=3):
+        self.pool = ThreadPoolExecutor(max_workers=num_threads)
+
+    # provide the same interface expected by dbt.task.runnable
+    def apply_async(self, func, args, callback):
+        def future_callback(fut):
+            return callback(fut.result())
+
+        self.pool.submit(func, *args).add_done_callback(future_callback)
+
+    # we would need to actually keep a "closed" attribute lying around and properly check it
+    def close(self):
+        pass
+
+    # shutdown(wait=True) mimics "join", whereas shutdown(wait=False) mimics "terminate"
+    def join(self):
+        self.pool.shutdown(wait=True)
 
 
 class ApiClient(object):
@@ -67,7 +89,7 @@ class ApiClient(object):
             configuration = Configuration()
         self.configuration = configuration
 
-        self.pool = ThreadPoolExecutor()
+        self.pool = CustomThreadPool()
         self.rest_client = rest.RESTClientObject(configuration)
         self.default_headers = {}
         if header_name is not None:
