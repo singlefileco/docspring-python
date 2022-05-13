@@ -29,7 +29,9 @@ from docspring import rest
 # Override multiprocessing ThreadPool with a ThreadPoolExecutor that doesn't use any
 # shared memory semaphore locks
 class CustomThreadPool:
-    """FakeThreadPool to replace ThreadPool, that doesn't work on lambdas"""
+    """FakeThreadPool to replace ThreadPool, that doesn't work on lambdas
+    v0.2.1 minor comment update
+    """
 
     def __init__(self, num_threads=3):
         self.pool = ThreadPoolExecutor(max_workers=num_threads)
